@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio for research position application">
+  <title>Portfolio | Research & AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#timeline" class="nav-link">Timeline</a>
+      <a href="#research" class="nav-link">Research</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="#reading" class="nav-link">Reading</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero/About Section -->
+    <section id="about" class="section hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="profile-photo" aria-label="Profile photo">
+          <img src="assets/profile_photo.JPG" alt="Zoya Slavina">
+        </div>
+        <h1 class="name typing-effect">Zoya Slavina</h1>
+        <p class="tagline">Research Scientist · AI & Societal Impacts · Human-AI Interaction</p>
+
+        <div class="bio-container">
+          <p class="bio-preview">
+            I'm an interdisciplinary researcher bridging <span class="highlight" data-highlight>international relations</span>,
+            <span class="highlight" data-highlight>sociology of technology</span>, and
+            <span class="highlight" data-highlight>human-computer interaction</span>.
+            My work focuses on observing real-world AI system behavior, analyzing societal impacts through empirical research, and understanding how technology and society co-evolve—examining beyond top-down policy, accounting for the power of bottom-up adoption patterns and industry dynamics that shape technological change.
+          </p>
+          <div class="scroll-indicator" id="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+            <span>Scroll to read more</span>
+          </div>
+          <div class="bio-expanded" id="bio-expanded" aria-hidden="true">
+            <p>
+              Currently pursuing a PhD in International Relations at the University of Białystok (Poland), I explore AI agents in governance, cross-cultural perspectives on AI values, and the minimal state capacity required for societies to effectively integrate AI systems. My IR and philosophy training gives me a "bird's eye view"—understanding how changes in one domain ripple across systems, how geopolitical and cultural contexts shape technology deployment, and how power dynamics (technical, economic, political) intersect.
+            </p>
+            <p>
+              My research examines how technological development, social norms, and political frameworks shape—and are shaped by—AI deployment and industry dynamics. When it comes to tech development, I'm particularly interested in how subtle differences in design affordances and interaction patterns can profoundly affect user experience across different cultural contexts. What fascinates me are questions many aren't yet asking: How do we develop "AI manners" as humans increasingly interact with AI agents? How can we make technical knowledge accessible so people understand their deep connection to technology? What does mutual progress (not competition) look like in AI research?
+            </p>
+            <p>
+              As a bridge-builder between technical, public, and policy communities, I translate complex AI/ML concepts for diverse audiences—from policymakers and business stakeholders to students and general audiences. I believe that when people understand technology better, they can live happier, more informed lives. My work draws on frameworks from AI ethics, human-AI interaction, algorithmic accountability, explainability (XAI), and sociology of technology—applying these across disciplines: international relations, innovation governance and policymaking, cultural studies, and synthetic media.
+            </p>
+            <p>
+              I'm currently exploring Constitutional AI frameworks and evaluation methodologies, particularly interested in how agentic systems can be both scalable and ethically aligned. My research interests include emergent disruptive technologies (EDTs), quantifying mixed-initiative co-creativity in human-AI collaborations, and understanding interaction dynamics from multiple perspectives—how users perceive AI, how AI systems are designed to interpret user behavior, and the understudied question of how different interaction styles (from "you, robot, work!" to treating AI as a conversational partner) affect system performance and user experience. I'm also interested in exploring diverse AI approaches including open-source models and non-Western systems, finding ways to apply these insights to international relations and cross-disciplinary research.
+            </p>
+            <div class="bio-glow" aria-hidden="true"></div>
+          </div>
+          <button class="bio-toggle" id="bio-toggle" aria-expanded="false" aria-controls="bio-expanded">
+            Read more
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Research Timeline -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <h2 class="section-title">Research Timeline</h2>
+        <p class="timeline-hint">Click on any bar for details · Drag to scroll →</p>
+        <div class="timeline-wrapper" id="timeline-wrapper">
+          <div class="timeline">
+            <!-- Timeline track with years and clickable duration bars -->
+            <div class="timeline-track">
+              <div class="timeline-years">
+                <span class="year-marker">2026</span>
+                <span class="year-marker">2025</span>
+                <span class="year-marker">2024</span>
+                <span class="year-marker">2023</span>
+                <span class="year-marker">2022</span>
+                <span class="year-marker">2021</span>
+                <span class="year-marker">2020</span>
+                <span class="year-marker">2019</span>
+              </div>
+              <div class="timeline-line" aria-hidden="true"></div>
+
+              <!-- Clickable Duration bars with embedded card content -->
+              <div class="duration-bars">
+                <!-- PhD Oct 2025-Present (ongoing) -->
+                <div class="duration-bar ongoing" style="--start: 0; --end: 0.25;" data-row="0" data-id="phd" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">PhD in International Relations</span>
+                  <div class="bar-tags">
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Agentic State</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2025 - Present</span>
+                    <h3 class="timeline-title">PhD in International Relations</h3>
+                    <p class="timeline-distinction">Expected 2029</p>
+                    <p class="timeline-institution">University of Bialystok, Poland</p>
+                    <div class="timeline-tags">
+                      <span class="tag">AI Agents in IR</span>
+                      <span class="tag">The Agentic State</span>
+                      <span class="tag">EU-US Tech Rivalry</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Rector's Rep Oct 2025-Present (ongoing) -->
+                <div class="duration-bar ongoing" style="--start: 0; --end: 0.25;" data-row="1" data-id="rector" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">Rector's Rep</span>
+                  <div class="bar-tags">
+                    <span class="tag">Leadership</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2025 - Present</span>
+                    <h3 class="timeline-title">Rector's Representative for Internationalization</h3>
+                    <p class="timeline-institution">University of Bialystok, Poland</p>
+                    <div class="timeline-tags">
+                      <span class="tag">International Strategy</span>
+                      <span class="tag">University Leadership</span>
+                      <span class="tag">Diplomacy</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Lecturer Oct 2025-Present (ongoing) -->
+                <div class="duration-bar ongoing" style="--start: 0; --end: 0.25;" data-row="3" data-id="lecturer" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">Lecturer</span>
+                  <div class="bar-tags">
+                    <span class="tag">Teaching</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2025 - Present</span>
+                    <h3 class="timeline-title">Lecturer, Dept. of International Relations</h3>
+                    <p class="timeline-institution">University of Bialystok, Poland</p>
+                    <div class="timeline-tags">
+                      <span class="tag">Teaching</span>
+                      <span class="tag">Curriculum Design</span>
+                      <span class="tag">Leadership</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guest Lecturer Jan-Feb 2025 -->
+                <div class="duration-bar short" style="--start: 0.83; --end: 1;" data-row="3" data-id="guest" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">Guest Lecturer</span>
+                  <div class="bar-tags">
+                    <span class="tag">AI Ethics</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Jan - Feb 2025</span>
+                    <h3 class="timeline-title">Guest Lecturer, AI Ethics in Synthetic Media</h3>
+                    <p class="timeline-institution">AI Atelier x Industry & Danish Film School</p>
+                    <div class="timeline-tags">
+                      <span class="tag">Ethical Synthetic Media</span>
+                      <span class="tag">Voice Cloning</span>
+                      <span class="tag">Deepfakes</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MA IR Oct 2023-Jul 2025 -->
+                <div class="duration-bar" style="--start: 0.5; --end: 2.25;" data-row="0" data-id="ma-ir" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">MA International Relations</span>
+                  <div class="bar-tags">
+                    <span class="tag">AI Governance</span>
+                    <span class="tag">Cybersecurity</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2023 - Jul 2025</span>
+                    <h3 class="timeline-title">MA in International Relations</h3>
+                    <p class="timeline-distinction">Cum Laude</p>
+                    <p class="timeline-institution">University of Bialystok, Poland</p>
+                    <div class="timeline-tags">
+                      <span class="tag">AI Governance</span>
+                      <span class="tag">Cybersecurity Policy</span>
+                      <span class="tag">EU Digital Transformation</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MA Cultural Studies Oct 2023-Jul 2025 -->
+                <div class="duration-bar" style="--start: 0.5; --end: 2.25;" data-row="1" data-id="ma-cultural" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">MA Cultural Studies</span>
+                  <div class="bar-tags">
+                    <span class="tag">Co-Creative AI</span>
+                    <span class="tag">HCI</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2023 - Jul 2025</span>
+                    <h3 class="timeline-title">MA in Cultural Studies</h3>
+                    <p class="timeline-distinction">Cum Laude</p>
+                    <p class="timeline-institution">University of Bialystok, Poland</p>
+                    <div class="timeline-tags">
+                      <span class="tag">Co-Creative Systems</span>
+                      <span class="tag">Generative AI in Art Therapy</span>
+                      <span class="tag">HCI Frameworks</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Stratyfy Oct 2023-Dec 2025 -->
+                <div class="duration-bar" style="--start: 0.08; --end: 2.25;" data-row="2" data-id="stratyfy" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">Stratyfy - AI Ethics</span>
+                  <div class="bar-tags">
+                    <span class="tag">Research</span>
+                    <span class="tag">Writing</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2023 - Dec 2025</span>
+                    <h3 class="timeline-title">AI Ethics Researcher & Technical Copywriter</h3>
+                    <p class="timeline-institution">Stratyfy Inc. · New York, USA (Remote)</p>
+                    <div class="timeline-tags">
+                      <span class="tag">AI Research</span>
+                      <span class="tag">Technical Writing</span>
+                      <span class="tag">Algorithmic Accountability</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- BA Philosophy Oct 2020-Jul 2023 -->
+                <div class="duration-bar" style="--start: 2.5; --end: 5.25;" data-row="1" data-id="ba-phil" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">BA Philosophy & Ethics</span>
+                  <div class="bar-tags">
+                    <span class="tag">Tech Philosophy</span>
+                    <span class="tag">AI Ethics</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Oct 2020 - Jul 2023</span>
+                    <h3 class="timeline-title">BA in Philosophy & Ethics</h3>
+                    <p class="timeline-distinction">Final Grade: Excellent</p>
+                    <p class="timeline-institution">University of Bialystok, Poland</p>
+                    <div class="timeline-tags">
+                      <span class="tag">Philosophy of Technology</span>
+                      <span class="tag">AI Ethics</span>
+                      <span class="tag">Technology Policy</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- BA Crossmedia Sep 2019-Jun 2022 -->
+                <div class="duration-bar" style="--start: 3.58; --end: 6.33;" data-row="0" data-id="ba-cross" tabindex="0" role="button" aria-expanded="false">
+                  <span class="bar-title">BA Crossmedia for Film & TV</span>
+                  <div class="bar-tags">
+                    <span class="tag">Transmedia</span>
+                    <span class="tag">Storytelling</span>
+                  </div>
+                  <div class="timeline-popup">
+                    <button class="popup-close" aria-label="Close">&times;</button>
+                    <span class="timeline-date">Sep 2019 - Jun 2022</span>
+                    <h3 class="timeline-title">BA in Crossmedia for Film & Television</h3>
+                    <p class="timeline-distinction">Cum Laude</p>
+                    <p class="timeline-institution">Tallinn University, Baltic Film & Media School</p>
+                    <div class="timeline-tags">
+                      <span class="tag">Transmedia Storytelling</span>
+                      <span class="tag">Audience Engagement</span>
+                      <span class="tag">Multiplatform Experiences</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Publications -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2 class="section-title">Research & Publications Highlights</h2>
+        <div class="card-grid">
+          <article class="research-card">
+            <span class="badge">Academic Paper</span>
+            <h3 class="card-title">AI as a Political Artefact: Technological Mediation in Constructivist International Relations</h3>
+            <p class="card-meta">June 2025 · Studies in Logic, Grammar and Rhetoric, Volume 70, Issue 1</p>
+            <p class="card-description">
+              Examines AI as a political artefact shaping agency, mediation, and decision-making in international relations.
+            </p>
+            <a href="https://doi.org/10.2478/slgr-2025-0056" class="card-link" target="_blank" rel="noopener">Read the paper →</a>
+          </article>
+
+          <article class="research-card">
+            <span class="badge badge-preprint">White Paper</span>
+            <h3 class="card-title">Leveraging Knowledge Synergy for Enhanced Decision-Making in Finance</h3>
+            <p class="card-meta">2024 · Stratyfy Inc.</p>
+            <p class="card-description">
+              Integrating multi-source knowledge enables finance firms to improve decision accuracy, fraud detection, and efficiency.
+            </p>
+            <a href="https://stratyfy.com/leveraging-knowledge-synergy-for-enhanced-decision-making-in-finance/" class="card-link" target="_blank" rel="noopener">Read the white paper →</a>
+          </article>
+
+          <article class="research-card">
+            <span class="badge badge-thesis">Thesis</span>
+            <h3 class="card-title">Culture of Collaboration and Co-Creative Practices on the Example of Mixed-Initiative Co-Creative AI Drawing Technology</h3>
+            <p class="card-meta">July 2025 · University of Bialystok</p>
+            <p class="card-description">
+              Examines processual human–AI co-creation, shared agency, and mixed-initiative interaction beyond productivity-driven models.
+            </p>
+            <a href="https://doi.org/10.13140/RG.2.2.31725.86248" class="card-link" target="_blank" rel="noopener">Read the thesis →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Selected Experience</h2>
+        <div class="experience-list">
+          <article class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-title">Lecturer & Rector's Representative for Internationalization</h3>
+              <span class="experience-company">University of Bialystok</span>
+            </div>
+            <span class="experience-date">Oct 2025–Present | Bialystok, Poland</span>
+            <ul class="experience-points">
+              <li>Teach BA and MA courses on international relations, technology governance, and policy analysis; designed and teaching "Emergent Disruptive Technologies in International Relations" (MA level, taught in English)</li>
+              <li>Develop curriculum translating complex AI/ML concepts for non-technical IR students; create evaluation frameworks for student understanding of technology policy</li>
+              <li>Support functioning of Rector's Commission for Internationalization; represent university at international events and partnerships, bridging institutional strategy with international stakeholders</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-title">AI Ethics Researcher & Technical Copywriter</h3>
+              <span class="experience-company">Stratyfy Inc.</span>
+            </div>
+            <span class="experience-date">Oct 2023–Dec 2024 | Remote, Part-time</span>
+            <ul class="experience-points">
+              <li>Ghostwriter and researcher for technical analyses on AI ethics, algorithmic accountability, and emerging technologies for executive and business audiences in fintech industry</li>
+              <li>Translated complex technical and regulatory concepts into accessible content for business stakeholders in research and marketing materials as well as (technical) internal documentation</li>
+              <li>Co-developed evaluation frameworks for assessing AI system impacts, explainability challenges, and operational risks in financial services</li>
+            </ul>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-title">Guest Lecturer, AI Ethics in Synthetic Media Production</h3>
+              <span class="experience-company">AI Atelier x Industry & Danish Film School</span>
+            </div>
+            <span class="experience-date">Jan–Feb 2025 | Tallinn & Copenhagen, Remote</span>
+            <ul class="experience-points">
+              <li>Designed and delivered lectures on AI ethics in synthetic media (voice cloning, deepfakes) for industry professionals</li>
+              <li>Presented actionable evaluation frameworks and ethical checklists for industry application</li>
+              <li>Facilitated discussions on responsible implementation in media production workflows and initiated test project developments</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section">
+      <div class="container">
+        <h2 class="section-title">Blog</h2>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <span class="blog-date">January 25, 2026 · 19:55</span>
+            <h3 class="blog-title">Weekend with Claude: From Research to Reality</h3>
+            <p class="blog-excerpt">
+              I learned Claude Code and Cursor on Saturday morning and shipped my complete website by Sunday afternoon. This weekend wasn't just about building a website; it was about experiencing firsthand the capabilities gap...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-1" aria-expanded="false" aria-controls="blog-modal-1">Instant View →</button>
+          </article>
+
+          <article class="blog-card">
+            <span class="blog-date">January 20, 2026</span>
+            <h3 class="blog-title">Scientific Diplomacy at the Intersection of Research and International Affairs</h3>
+            <p class="blog-excerpt">
+              Scientific diplomacy is gaining clear momentum. In Poland and internationally, it is increasingly recognised as a critical area at the intersection of research, education, technology, and international affairs...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-2" aria-expanded="false" aria-controls="blog-modal-2">Instant View →</button>
+          </article>
+
+          <article class="blog-card">
+            <span class="blog-date">September 2025</span>
+            <h3 class="blog-title">Diplomacy in the Digital Era: Security, AI, and Institutional Change</h3>
+            <p class="blog-excerpt">
+              How does digitalization transform diplomacy and what role might AI play in embassies? During a visit to the German Embassy in Warsaw...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-3" aria-expanded="false" aria-controls="blog-modal-3">Instant View →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Reading -->
+    <section id="reading" class="section">
+      <div class="container">
+        <h2 class="section-title">Recent Reading</h2>
+        <div class="books-grid">
+          <article class="book-card">
+            <img class="book-cover" src="assets/Book_chip_war_cover.webp" alt="Chip War book cover">
+            <span class="badge" style="background: var(--claude-orange); font-size: 0.7rem;">Marinating...</span>
+            <h3 class="book-title">Chip War: The Fight for the World's Most Critical Technology</h3>
+            <p class="book-author">by Chris Miller</p>
+            <p class="book-note">
+              Beyond technical significance, semiconductors act as critical tools for political power—recognized by some nations, overlooked by others. Reading in Polish bridged my technical vocabulary between languages, essential since I work primarily in English despite being Polish.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <img class="book-cover" src="assets/Book_information_society_cover.avif" alt="Information and Society book cover">
+            <span class="badge" style="background: var(--claude-orange); font-size: 0.7rem;">Computing...</span>
+            <h3 class="book-title">Information and Society</h3>
+            <p class="book-author">by Michael Buckland</p>
+            <p class="book-note">
+              The "information society" has always existed—what changes is how we store, share, copy, and remix. Beyond technical aspects of managing and retrieval, this explores how information's social and personal dimensions shape action.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <img class="book-cover" src="assets/Book_win_friends_cover.webp" alt="How to Win Friends and Influence People book cover">
+            <h3 class="book-title">How to Win Friends and Influence People</h3>
+            <p class="book-author">by Dale Carnegie</p>
+            <p class="book-note">
+              Actually listening to people's worries, then respectfully explaining while relating to their experiences. Recognizing we all have our own truth—what's "right" is relational. When explaining complex concepts, consider how it fits their world, not mine.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <img class="book-cover" src="assets/Book_unfair_advantage_cover.webp" alt="Unfair Advantage book cover">
+            <h3 class="book-title">Unfair Advantage</h3>
+            <p class="book-author">by Ash Ali & Hasan Kubba</p>
+            <p class="book-note">
+              Recognizing where my strengths lie, even when I don't quite see them. Beyond growth advice, it's about partnerships—becoming stronger by complementing each other's unfair advantages.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <img class="book-cover" src="assets/Book_tech_sick_cover.jpg" alt="Is Technology Making Us Sick? book cover">
+            <h3 class="book-title">Is Technology Making Us Sick?</h3>
+            <p class="book-author">by Ian Douglas</p>
+            <p class="book-note">
+              Transparency noted as critical for addressing challenges people face with technologies—including how it makes them feel, sometimes literally sick. Well-researched, with the author's clear position combining opinion with findings. Got it in London for £3.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container contact-container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-intro">
+          I'm always happy to discuss research ideas, potential collaborations,
+          or opportunities. Feel free to reach out!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:slavina.aiethics@gmail.com" class="contact-link">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            slavina.aiethics@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/zoyaslavina/" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/xxxphobic" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <button class="cv-button" id="cv-toggle" aria-expanded="false" aria-controls="cv-modal">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          View CV
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Zoya Slavina. Built with Cursor, Claude Code & care.</p>
+    </div>
+  </footer>
+
+  <!-- CV Modal -->
+  <div class="cv-modal" id="cv-modal" aria-hidden="true" role="dialog" aria-labelledby="cv-modal-title">
+    <div class="cv-modal-overlay"></div>
+    <div class="cv-modal-content">
+      <button class="cv-modal-close" aria-label="Close CV">&times;</button>
+      <h2 class="cv-modal-title" id="cv-modal-title">Curriculum Vitae</h2>
+      <div class="cv-embed">
+        <iframe src="assets/CV_ZS.pdf#toolbar=0&navpanes=0&view=FitH" title="Zoya Slavina CV"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Modal 1: Weekend with Claude -->
+  <div class="blog-modal" id="blog-modal-1" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-1">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <img src="assets/blog1_header_image1.png" alt="Weekend with Claude header" class="blog-header-image">
+
+        <h1 class="blog-modal-title" id="blog-modal-title-1">Weekend with Claude: From Research to Reality</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · January 25, 2026</p>
+
+        <div class="blog-modal-body">
+          <h2 class="blog-section-title">Closing My Own Capabilities Gap</h2>
+
+          <p>I learned Claude Code and Cursor on Saturday morning and shipped my complete website by Sunday afternoon. In between, I went for coffee and hit the gym—no panic, no rush, just inspired action fueled by quiet confidence in the tools I was learning to use. I decided to take the rate limit message "hit your limit · resets 4pm (Europe/Warsaw)" to be less a frustration and more a gentle forcing function for sustainable work. This weekend wasn't just about building a website; it was about experiencing firsthand the <strong>capabilities gap</strong> I've been seeing and researching theoretically—the distance between what AI tools can do and what users actually leverage.</p>
+
+          <h2 class="blog-section-title">The Shift That Changed Everything</h2>
+
+          <p>It started with a conversation about applying to a Research Scientist position at Anthropic. Because, well, we use Claude for everything. My first instinct was excitement, but Claude's initial response was sobering:</p>
+
+          <blockquote class="blog-quote">
+            "For a Research Scientist role at Anthropic, you're facing a significant gap. This position typically requires published research in ML/AI, demonstrated technical implementation skills, and a track record of original research contributions. Without formal technical projects or programming proficiency, this will be a very difficult application."
+          </blockquote>
+
+          <p>Fair enough. But then I asked a simple question: "What is the application deadline?"</p>
+
+          <p>What happened next was remarkable. Claude reconsidered—not because I defended myself or explained why I was qualified, but because it took a second look at the role itself:</p>
+
+          <blockquote class="blog-quote">
+            "Looking at this specific role more carefully, it might actually be more compatible with your background than I initially thought... This completely changes the picture. You're actually a strong candidate for this specific role—you just don't realize it yet."
+          </blockquote>
+
+          <p>This pivot—this willingness to reevaluate initial assumptions—was a profound "aha moment" for me. It revealed something about Claude's architecture, the Constitutional AI framework underlying it, and the thoughtful approach of the people building it. The system didn't just follow a script but has reflected, reconsidered, and adapted. This change gave me confidence not just about the application, but about what I was about to attempt: learning new tools and building something real in a single weekend.</p>
+
+          <p>(And yes, my partner's encouragement helped too!)</p>
+
+          <h2 class="blog-section-title">Parallel Workflows: The New Atomic Habits</h2>
+
+          <p>Six years ago, I completed a full-stack development course. A couple years ago, I dabbled in creative coding. But it would have been a stretch to call myself a developer—even an amateur one. This weekend changed that.</p>
+
+          <p>What made the difference wasn't just the tools (Claude Code and Cursor), but the mental model shift they enabled. I could work on my website while simultaneously preparing application materials, perfecting my CV, and learning about the position. While Claude Code was building components or debugging, I was researching Anthropic's papers, refining my cover letter, or simply taking necessary breaks.</p>
+
+          <p>This is what I've been calling the "capabilities gap" in my research: the widening distance between what AI systems can do and how users actually leverage them. It's not just about knowing features exist—it requires a fundamental mindset shift. As <a href="https://www.interconnects.ai/p/getting-good-at-agents" target="_blank" rel="noopener noreferrer">Nathan Lambert writes</a>, we're still "getting good at agents," learning new ways of doing things. For me, that meant developing new atomic habits: "while I do this, the agent builds that" requires planning skills, project management, and trusting the system enough to work in parallel rather than sequentially.</p>
+
+          <h2 class="blog-section-title">Practical Insights: What I Learned</h2>
+
+          <p><strong>On tool selection:</strong> I quickly learned to match tasks to capabilities. Claude excels at reasoning and composition—complex problem-solving, architectural decisions, nuanced writing. For simpler, more mechanical tasks, I'd use ChatGPT or other tools (of course, I didn't tell GPT I'm applying to Anthropic to prevent any sabotage). This isn't about one being "better"—it's about understanding what each tool does best and orchestrating accordingly.</p>
+
+          <p><strong>On Claude Code specifically:</strong> One surprising discovery—when I tried copying longer text passages to fill website sections, Claude Code would sometimes didn't get the complete version. The more effective strategy? Taking screenshots of the text and pasting those instead. A small workaround, but it reveals something about how these tools interpret different input formats.</p>
+
+          <p><strong>On rate limits as design:</strong> The Pro plan's message limits became a feature, not a bug. They enforced breaks between working sessions, preventing burnout and giving me time to reflect on what I was building. Constraints can be generative.</p>
+
+          <h2 class="blog-section-title">From Theory to Practice: Living My Research</h2>
+
+          <p>The irony isn't lost on me: I study human-AI co-creativity, interaction patterns, and how users develop mental models for AI systems—and this weekend was among those moments when I experienced all of it firsthand. I became my own case study. In <a href="https://doi.org/10.13140/RG.2.2.31725.86248" target="_blank" rel="noopener noreferrer">my master's thesis</a>, I analyzed co-creative practices with AI through HCI and art therapy frameworks, examining cognitive states activated during collaborative creation. I found that users prefer maintaining strong control while expecting substantial support from AI systems. Well, I believe I still managed to form a partnership while leading Claude toward my vision: I made all architectural decisions, but Claude handled implementation details, debugging, and optimization. The mixed-initiative balance worked because the tools respected my agency while augmenting my capabilities.</p>
+
+          <p>This experience also connects to emerging research directions I'm exploring. Dario Amodei recently identified "AI building AI" as a key research area for 2026. I just lived it—using Claude to build digital artifacts (my website), which itself required Claude to generate code, design systems, and solve technical problems. The human role shifted from implementation to orchestration, from coding to guiding, from building to designing.</p>
+
+          <h2 class="blog-section-title">What's Next: Creative Coding and Beyond</h2>
+
+          <p>I'm already thinking about what else becomes possible. Creative coding, for instance—I got super curious to test Claude Code for live VJ performances, producing visuals from code on-the-go. This wouldn't just be entertaining; it would be an interesting research project in itself. Using the interface (whether Claude Code, Cursor, or something else) as a mixed-initiative creative tool during live performance would reveal fascinating insights about real-time human-AI collaboration under time pressure.</p>
+
+          <p>More broadly, this weekend taught me that the capabilities gap isn't just an abstract research concept—it's something we all navigate daily. The tools exist. The challenge is developing the mental models, workflows, and "AI manners" (as I've been calling them, I am still guided by <em>the etiquette</em> when interaction with AI) to effectively collaborate with increasingly capable systems. It requires rethinking not just how we work, but how we think about work itself.</p>
+
+          <p>Many worry we're doomed to lose jobs as AI capabilities expand. I think we're facing something more interesting: a radical rethinking of how society organizes work, creativity, and knowledge production. If we take sustainable approaches—like I see Anthropic doing with frameworks like Constitutional AI among others, thoughtful rate limits, and emphasis on human-AI collaboration rather than replacement—we'll be fine. Actually, it could be better than fine, as we'll unlock possibilities and the world we haven't imagined yet.</p>
+
+          <h2 class="blog-section-title">The Meta-Reflection</h2>
+
+          <p>There's something beautifully recursive about using Claude to prepare an application to work on Claude. About using AI-assisted development to demonstrate technical capability. About experiencing the capabilities gap while researching it. About becoming both researcher and subject.</p>
+
+          <p>This weekend, I didn't just build a website. I closed my own capabilities gap. I shifted from studying human-AI interaction to embodying it. I moved from theoretical frameworks to practical implementation. And I gained confidence not just in the tools, but in my ability to learn, adapt, and ship—even under weekend time constraints.</p>
+
+          <p>The website is live. The application is submitted. And I'm already thinking about what to build next.</p>
+
+          <hr class="blog-divider">
+
+          <p class="blog-footer-note"><em>This post is part of my application to Anthropic's Societal Impacts team. You can explore my research on human-AI interaction, AI governance, and cross-cultural technology studies at <a href="https://zoyaslavina.com">zoyaslavina.com</a>.</em></p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Blog Modal 2: Scientific Diplomacy -->
+  <div class="blog-modal" id="blog-modal-2" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-2">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <img src="assets/blog2_Dyplomacja_foto1.jpg" alt="Scientific Diplomacy panel discussion" class="blog-header-image">
+
+        <h1 class="blog-modal-title" id="blog-modal-title-2">Scientific Diplomacy at the Intersection of Research and International Affairs</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · January 20, 2026</p>
+
+        <div class="blog-modal-body">
+          <p>Scientific diplomacy is gaining clear momentum. In Poland and internationally, it is increasingly recognised as a critical area at the intersection of research, education, technology, and international affairs. As technological development accelerates and translates into political and strategic influence, public awareness is also growing: innovation is driven by research, science, and advanced education.</p>
+
+          <p>In this context, in December I had the pleasure of taking part in a panel discussion on scientific diplomacy, alongside two esteemed professors from our university. I would like to thank the <strong>Regionalny Ośrodek Debaty Międzynarodowej</strong> (Center for International Debate) for the invitation and for the opportunity to contribute as a member of the International Relations Department and as the Rector's representative.</p>
+
+          <img src="assets/blog2_Dyplomacja_foto2.jpg" alt="Panel discussion on scientific diplomacy" class="blog-body-image">
+
+          <p>These developments place responsibility on us—both individually and institutionally—to communicate the value of our research more effectively. They also call for actively seeking collaboration, building scientific networks, and fostering international partnerships that support academic growth while strengthening institutional visibility through high-quality, credible research.</p>
+
+          <p>An important point raised during the discussion was the need for the diplomatic community to better understand scientific methods and decision-making processes. Much like in engineering or other technical fields, scientific authority, validation, and responsibility operate differently than in political contexts. Recognising these differences is essential when designing public–scientific initiatives and policies that rely on expert knowledge.</p>
+
+          <p>Thank you to the organisers and fellow panelists for a thoughtful and timely discussion.</p>
+
+          <hr class="blog-divider">
+
+          <p class="blog-footer-note"><a href="https://noe.uwb.edu.pl/aktualnosci/dyplomacja-naukowa-jako-narzedzie-budowania-wizerunku-polski-debata-z-udzialem-dr-hab-m-kowalczuk-waledziak--prof-uwb-790.html" target="_blank" rel="noopener noreferrer">🔗 More details about the event</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Blog Modal 3: Diplomacy in the Digital Era -->
+  <div class="blog-modal" id="blog-modal-3" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-3">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <h1 class="blog-modal-title" id="blog-modal-title-3">Diplomacy in the Digital Era: Security, AI, and Institutional Change</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · September 2025</p>
+
+        <div class="blog-modal-body">
+          <p>How does digitalization transform diplomacy and what role might AI play in embassies?</p>
+
+          <p>During a recent visit to the German Embassy in Warsaw, organized by the <strong>Union of Sisterhood Foundation</strong>, we were able to talk about the professional and personal sides of diplomatic work. The discussion was both informative and honest, covering everything from Polish-German collaboration and the role of women in politics to the daily life of a diplomat.</p>
+
+          <p>I was particularly interested in the German experiences with the digitalization of diplomacy and asked about the embassy's practices, including the use of disruptive technologies such as AI. The exchange was especially insightful, as the representative we met specializes in this field. While security and privacy remain the key challenges, Berlin is developing solutions aimed at advancing diplomatic practice while addressing these concerns.</p>
+
+          <p>A big thank you to the Foundation for the invitation and the chance to deepen my understanding of how technological innovation intersects with international relations.</p>
+
+          <div class="blog-image-gallery">
+            <img src="assets/blog3_photo1.JPG" alt="Visit to German Embassy in Warsaw" class="blog-gallery-image">
+            <img src="assets/blog3_photo2.JPG" alt="Discussion at German Embassy" class="blog-gallery-image">
+          </div>
+
+          <hr class="blog-divider">
+
+          <p class="blog-footer-note"><em>This post was originally published on LinkedIn. You can explore my personal page at <a href="https://www.linkedin.com/in/zoyaslavina/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
