@@ -137,6 +137,32 @@
     });
   }
 
+  // ===== Dynamic Timeline Positioning =====
+  function initDynamicTimeline() {
+    var MS_PER_YEAR = 365.25 * 24 * 60 * 60 * 1000;
+    var today = new Date();
+
+    // Update year markers to always reflect the current year range
+    var yearMarkers = document.querySelectorAll('.year-marker');
+    var currentYear = today.getFullYear();
+    yearMarkers.forEach(function(marker, i) {
+      marker.textContent = currentYear - i;
+    });
+
+    // Calculate and inject --start / --end for each bar
+    document.querySelectorAll('.duration-bar[data-start-date]').forEach(function(bar) {
+      var startDate = new Date(bar.dataset.startDate);
+      var isOngoing = !bar.dataset.endDate;
+      var endDate = isOngoing ? today : new Date(bar.dataset.endDate);
+
+      var startVal = Math.max(0, (today - endDate) / MS_PER_YEAR);
+      var endVal = (today - startDate) / MS_PER_YEAR;
+
+      bar.style.setProperty('--start', startVal.toFixed(4));
+      bar.style.setProperty('--end', endVal.toFixed(4));
+    });
+  }
+
   // ===== Timeline Bar Click to Expand =====
   function initTimelineBarClicks() {
     const bars = document.querySelectorAll('.duration-bar[data-id]');
@@ -408,6 +434,63 @@
     });
   }
 
+  // ===== Blog Drag-to-Scroll =====
+  function initBlogDrag() {
+    var wrapper = document.getElementById('blog-scroll-wrapper');
+    var grid = wrapper && wrapper.querySelector('.blog-grid');
+    if (!wrapper || !grid) return;
+
+    var isDown = false;
+    var startX;
+    var scrollLeft;
+
+    wrapper.addEventListener('mousedown', function(e) {
+      if (e.target.closest('.blog-card button')) return;
+      isDown = true;
+      wrapper.classList.add('dragging');
+      startX = e.pageX - grid.offsetLeft;
+      scrollLeft = grid.scrollLeft;
+      e.preventDefault();
+    });
+
+    wrapper.addEventListener('mouseleave', function() {
+      isDown = false;
+      wrapper.classList.remove('dragging');
+    });
+
+    wrapper.addEventListener('mouseup', function() {
+      isDown = false;
+      wrapper.classList.remove('dragging');
+    });
+
+    wrapper.addEventListener('mousemove', function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - grid.offsetLeft;
+      var walk = (x - startX) * 2;
+      grid.scrollLeft = scrollLeft - walk;
+    });
+
+    var touchStartX = null;
+    var touchScrollLeft = null;
+
+    wrapper.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].pageX - grid.offsetLeft;
+      touchScrollLeft = grid.scrollLeft;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchmove', function(e) {
+      if (!touchStartX) return;
+      var x = e.touches[0].pageX - grid.offsetLeft;
+      var walk = (x - touchStartX) * 1.5;
+      grid.scrollLeft = touchScrollLeft - walk;
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', function() {
+      touchStartX = null;
+    });
+  }
+
   // ===== Reduce Motion Check =====
   function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -508,10 +591,12 @@
 
   // ===== Initialize All Features =====
   function init() {
+    initDynamicTimeline();
     initBioToggle();
     initSmoothScroll();
     initKeyboardNav();
     initTimelineDrag();
+    initBlogDrag();
     initTimelineBarClicks();
     initCVModal();
     initBlogModals();

@@ -179,6 +179,84 @@ a:focus-visible {
   z-index: -1;
 }
 
+/* ===== Hero Decorative Waves ===== */
+.hero-wave {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-wave-left {
+  left: -50px;
+  max-width: 200px;
+}
+
+.hero-wave-right {
+  right: -50px;
+  max-width: 180px;
+}
+
+@media (max-width: 900px) {
+  .hero-wave {
+    max-width: 120px;
+    opacity: 0.7;
+  }
+  .hero-wave-left { left: -40px; }
+  .hero-wave-right { right: -40px; }
+}
+
+@media (max-width: 600px) {
+  .hero-wave {
+    display: none;
+  }
+}
+
+/* ===== Contact Section ===== */
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Contact Decorative Waves ===== */
+.contact-wave {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-wave-left {
+  left: -50px;
+  max-width: 180px;
+}
+
+.contact-wave-right {
+  right: -50px;
+  max-width: 160px;
+}
+
+@media (max-width: 900px) {
+  .contact-wave {
+    max-width: 110px;
+    opacity: 0.7;
+  }
+  .contact-wave-left { left: -40px; }
+  .contact-wave-right { right: -40px; }
+}
+
+@media (max-width: 600px) {
+  .contact-wave {
+    display: none;
+  }
+}
+
 @keyframes gradientShift {
   0%, 100% {
     background-position: 0% 50%;
@@ -1061,25 +1139,32 @@ a:focus-visible {
 }
 
 /* ===== Blog Section ===== */
+.blog-scroll-wrapper {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.blog-scroll-wrapper.dragging {
+  cursor: grabbing;
+}
+
 .blog-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-@media (min-width: 600px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.blog-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .blog-card {
+  min-width: 320px;
+  flex: 0 0 320px;
   background: var(--bg-card);
   padding: 1.5rem;
   border-radius: 8px;
@@ -1574,6 +1659,26 @@ img.book-cover {
 
 .blog-footer-note em {
   font-style: italic;
+}
+
+.blog-image-caption {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.blog-references {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.blog-references li {
+  margin-bottom: 0.5rem;
 }
 
 /* Blog card button styling */

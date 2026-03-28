@@ -27,6 +27,16 @@
     <!-- Hero/About Section -->
     <section id="about" class="section hero">
       <div class="hero-bg"></div>
+
+      <!-- Decorative wave shapes (hidden — uncomment to restore)
+      <svg class="hero-wave hero-wave-left" viewBox="0 0 200 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 0,0 C 100,60 160,200 100,360 C 40,520 -40,580 60,740 C 140,860 100,940 0,1000 L -90,1000 C -90,940 -50,860 30,740 C 130,580 210,520 150,360 C 90,200 30,60 -90,0 Z" fill="#FF6B35" opacity="0.9"/>
+      </svg>
+      <svg class="hero-wave hero-wave-right" viewBox="0 0 200 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 200,0 C 100,80 40,220 110,380 C 180,540 260,600 180,760 C 110,880 150,940 200,1000 L 290,1000 C 290,940 250,880 320,760 C 400,600 320,540 250,380 C 180,220 240,80 290,0 Z" fill="#FF6B35" opacity="0.9"/>
+      </svg>
+      -->
+
       <div class="container hero-content">
         <div class="profile-photo" aria-label="Profile photo">
           <img src="assets/profile_photo.JPG" alt="Zoya Slavina">
@@ -93,7 +103,7 @@
               <!-- Clickable Duration bars with embedded card content -->
               <div class="duration-bars">
                 <!-- PhD Oct 2025-Present (ongoing) -->
-                <div class="duration-bar ongoing" style="--start: 0; --end: 0.25;" data-row="0" data-id="phd" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar ongoing" data-start-date="2025-10-01" data-row="0" data-id="phd" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">PhD in International Relations</span>
                   <div class="bar-tags">
                     <span class="tag">AI Agents</span>
@@ -114,7 +124,7 @@
                 </div>
 
                 <!-- Rector's Rep Oct 2025-Present (ongoing) -->
-                <div class="duration-bar ongoing" style="--start: 0; --end: 0.25;" data-row="1" data-id="rector" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar ongoing" data-start-date="2025-10-01" data-row="1" data-id="rector" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">Rector's Rep</span>
                   <div class="bar-tags">
                     <span class="tag">Leadership</span>
@@ -133,7 +143,7 @@
                 </div>
 
                 <!-- Lecturer Oct 2025-Present (ongoing) -->
-                <div class="duration-bar ongoing" style="--start: 0; --end: 0.25;" data-row="3" data-id="lecturer" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar ongoing" data-start-date="2025-10-01" data-row="3" data-id="lecturer" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">Lecturer</span>
                   <div class="bar-tags">
                     <span class="tag">Teaching</span>
@@ -152,7 +162,7 @@
                 </div>
 
                 <!-- Guest Lecturer Jan-Feb 2025 -->
-                <div class="duration-bar short" style="--start: 0.83; --end: 1;" data-row="3" data-id="guest" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar short" data-start-date="2025-01-01" data-end-date="2025-02-28" data-row="3" data-id="guest" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">Guest Lecturer</span>
                   <div class="bar-tags">
                     <span class="tag">AI Ethics</span>
@@ -171,7 +181,7 @@
                 </div>
 
                 <!-- MA IR Oct 2023-Jul 2025 -->
-                <div class="duration-bar" style="--start: 0.5; --end: 2.25;" data-row="0" data-id="ma-ir" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar" data-start-date="2023-10-01" data-end-date="2025-07-31" data-row="0" data-id="ma-ir" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">MA International Relations</span>
                   <div class="bar-tags">
                     <span class="tag">AI Governance</span>
@@ -192,7 +202,7 @@
                 </div>
 
                 <!-- MA Cultural Studies Oct 2023-Jul 2025 -->
-                <div class="duration-bar" style="--start: 0.5; --end: 2.25;" data-row="1" data-id="ma-cultural" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar" data-start-date="2023-10-01" data-end-date="2025-07-31" data-row="1" data-id="ma-cultural" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">MA Cultural Studies</span>
                   <div class="bar-tags">
                     <span class="tag">Co-Creative AI</span>
@@ -213,7 +223,7 @@
                 </div>
 
                 <!-- Stratyfy Oct 2023-Dec 2025 -->
-                <div class="duration-bar" style="--start: 0.08; --end: 2.25;" data-row="2" data-id="stratyfy" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar" data-start-date="2023-10-01" data-end-date="2025-12-31" data-row="2" data-id="stratyfy" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">Stratyfy - AI Ethics</span>
                   <div class="bar-tags">
                     <span class="tag">Research</span>
@@ -233,7 +243,7 @@
                 </div>
 
                 <!-- BA Philosophy Oct 2020-Jul 2023 -->
-                <div class="duration-bar" style="--start: 2.5; --end: 5.25;" data-row="1" data-id="ba-phil" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar" data-start-date="2020-10-01" data-end-date="2023-07-31" data-row="1" data-id="ba-phil" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">BA Philosophy & Ethics</span>
                   <div class="bar-tags">
                     <span class="tag">Tech Philosophy</span>
@@ -254,7 +264,7 @@
                 </div>
 
                 <!-- BA Crossmedia Sep 2019-Jun 2022 -->
-                <div class="duration-bar" style="--start: 3.58; --end: 6.33;" data-row="0" data-id="ba-cross" tabindex="0" role="button" aria-expanded="false">
+                <div class="duration-bar" data-start-date="2019-09-01" data-end-date="2022-06-30" data-row="0" data-id="ba-cross" tabindex="0" role="button" aria-expanded="false">
                   <span class="bar-title">BA Crossmedia for Film & TV</span>
                   <div class="bar-tags">
                     <span class="tag">Transmedia</span>
@@ -369,7 +379,27 @@
     <section id="blog" class="section">
       <div class="container">
         <h2 class="section-title">Blog</h2>
+        <p class="timeline-hint">Click to read · Drag to scroll →</p>
+        <div class="blog-scroll-wrapper" id="blog-scroll-wrapper">
         <div class="blog-grid">
+          <article class="blog-card">
+            <span class="blog-date">March 17, 2026</span>
+            <h3 class="blog-title">Playing with Artificial Strangers</h3>
+            <p class="blog-excerpt">
+              What does a viral Polish humanoid robot and an AI tennis system have in common? Both reveal a counterintuitive truth: in human-AI collaboration, strategic imperfection builds more trust than flawless performance...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-4" aria-expanded="false" aria-controls="blog-modal-4">Instant View →</button>
+          </article>
+
+          <article class="blog-card">
+            <span class="blog-date">March 2026</span>
+            <h3 class="blog-title">AI Ethics as a New Market Reality: What the Data Reveals</h3>
+            <p class="blog-excerpt">
+              46% of people trust AI. 66% use it daily anyway. That gap — between what we believe and what we do — turns out to be one of the most commercially significant facts in tech right now...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-5" aria-expanded="false" aria-controls="blog-modal-5">Instant View →</button>
+          </article>
+
           <article class="blog-card">
             <span class="blog-date">January 25, 2026 · 19:55</span>
             <h3 class="blog-title">Weekend with Claude: From Research to Reality</h3>
@@ -396,6 +426,7 @@
             </p>
             <button class="card-link blog-instant-view" data-blog="blog-3" aria-expanded="false" aria-controls="blog-modal-3">Instant View →</button>
           </article>
+        </div>
         </div>
       </div>
     </section>
@@ -457,6 +488,15 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
+      <!-- Decorative wave shapes (hidden — uncomment to restore)
+      <svg class="contact-wave contact-wave-left" viewBox="0 0 200 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 0,0 C 120,80 150,250 80,400 C 10,550 -50,620 70,780 C 130,880 90,950 0,1000 L -90,1000 C -90,950 -50,880 30,780 C 150,620 210,550 140,400 C 70,250 40,80 -90,0 Z" fill="#FF6B35" opacity="0.9"/>
+      </svg>
+      <svg class="contact-wave contact-wave-right" viewBox="0 0 200 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 200,0 C 80,70 50,230 130,390 C 210,550 270,610 160,770 C 80,880 120,950 200,1000 L 290,1000 C 290,950 330,880 250,770 C 140,610 80,550 160,390 C 240,230 310,70 290,0 Z" fill="#FF6B35" opacity="0.9"/>
+      </svg>
+      -->
+
       <div class="container contact-container">
         <h2 class="section-title">Get in Touch</h2>
         <p class="contact-intro">
@@ -667,6 +707,167 @@
           <hr class="blog-divider">
 
           <p class="blog-footer-note"><em>This post was originally published on LinkedIn. You can explore my personal page at <a href="https://www.linkedin.com/in/zoyaslavina/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Blog Modal 4: Playing with Artificial Strangers -->
+  <div class="blog-modal" id="blog-modal-4" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-4">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <img src="assets/blog4_header.png" alt="Dark pastel painting of robots and humans playing together" class="blog-header-image">
+        <p class="blog-image-caption">Image by Zoya Slavina, developed with ChatGPT &amp; Adobe Photoshop</p>
+
+        <h1 class="blog-modal-title" id="blog-modal-title-4">Playing with Artificial Strangers</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · March 17, 2026</p>
+
+        <div class="blog-modal-body">
+          <p><em>What a Polish Celebrity and "Imperfect" Tennis-Playing Robot Reveal About the Future of Collaboration with Robots</em></p>
+
+          <p>I promise this post will be interesting, whatever your industry! <em>Note: This post is research-driven. For those curious, full references are listed at the end.</em></p>
+
+          <p>A robot has gone viral in Poland. Not because it's the most sophisticated machine ever built. Rather, because it's charming and feels relatable. But what does Edward bring to the understanding of advanced "intelligent" technologies assimilation in a society? Let's first get acquainted with the protagonist.</p>
+
+          <img src="assets/blog4_edward_night.webp" alt="Edward Warchocki humanoid robot standing at night in Warsaw city centre" class="blog-body-image">
+          <p class="blog-image-caption">Edward Warchocki in Warsaw, image from RobotsBeat, 2026</p>
+
+          <p>His name is Edward Warchocki. In two weeks, he racked up over 100,000 TikTok followers and hundreds of millions of views. He's appeared on prime-time TV, landed a luxury watch brand deal, and spent an hour in deep conversation with a 90-year-old woman on a Warsaw street. Some could describe him with the affectionate phrase: "an unemployed friend on a Tuesday" — the one who's always free, always curious, always up for a chat.</p>
+
+          <p>For my international friends, here is some context: He walks through Warsaw and Poznań, engages with strangers, attempted (unsuccessfully and endearingly) to travel to Choroszcz, converses with elderly passers-by, and occasionally behaves like he's had one drink too many. Behind the charm is a semi-autonomous architecture: an LLM drives conversation with a designed "soul" and personality, while movement is handled via remote control. His creators, entrepreneur Radosław Grzelaczyk and AI developer Bartosz Idzik, deliberately built his character to persist and evolve, recording conversations to develop a continuous personality history. Edward is, by their description, "completely different than he was two weeks ago."</p>
+
+          <img src="assets/blog4_edward_collage.png" alt="Edward Warchocki robot: getting on a bus, shaking hands with an elderly woman on the street, appearing at Radio VOX" class="blog-body-image">
+          <p class="blog-image-caption">Images from Edward's Instagram @edwardwarchocki</p>
+
+          <p>If you are uncertain how to identify him on the street, here are some specs: Edward is a Unitree G1 humanoid, 127cm tall, 35kg, up to 43 degrees of freedom, WiFi-connected, approximately two hours of battery life per charge, equipped with 3D LiDAR and depth cameras for environmental perception.<sup>12</sup></p>
+
+          <h2 class="blog-section-title">Against a backdrop of fear of Artificial Agents and "Intelligence": why this matters</h2>
+
+          <p>We are living through a period of serious AI anxiety, and not without reason. Fear of job displacement, erosion of human connection, questions about identity and inherent value. And then there's the famous uncanny valley: a concept coined by roboticist Masahiro Mori in 1970, describing the dip in human comfort when a robot looks almost human but not quite; close enough to trigger recognition, different enough to feel wrong. Think of CGI characters in early animated films that audiences found disturbing despite apparent technical polish.<sup>1,2,3</sup></p>
+
+          <p>An interesting fact: recent research confirms that LLM-powered conversation significantly reduces this eerie feeling, shifting user responses toward warmth and engagement, with conversational naturalness and interestingness identified as the key variables.<sup>4</sup></p>
+
+          <p>Edward sidesteps the uncanny valley or the exuding feeling of intimidation. He's visibly a robot, which gives him an exotic look, and yet feels "present" and "one of our own" due to his humour.</p>
+
+          <h2 class="blog-section-title">What could be working? Play as a bridge across the differences</h2>
+
+          <p>From my philosophy curriculum and the study of animal minds, I kept thinking about a concept that may even seem almost whimsical applied here: interspecies play.</p>
+
+          <p>Research in Animal Behaviour and Cognition identifies interspecific social play (ISP) as a rare but revealing phenomenon — like dogs playing with bears, primates engaging with dolphins. What makes it work is not their sameness, but mutual willingness: play signals, role reversals, self-handicapping. Both parties adjusting to the other's level. Trust built not through formal agreements, but with shared curiosity and low-stakes engagement.<sup>5,6</sup></p>
+
+          <p>Of course, play doesn't always land — sometimes a bear simply isn't in the mood. So, the architecture of playful invitation, of non-threatening curiosity, seems to lower barriers that factual reassurance never could. We are bringing new agentic actors into our social world that are neither human nor animal. And the conditions that create cross-species connection (such as playfulness, reciprocity, curiosity, humour) may be what also helps humans extend something like trust to artificial ones.</p>
+
+          <h2 class="blog-section-title">A note from my PhD research: the overlooked dimension of trust in AI systems</h2>
+
+          <p>In research on AI agents in negotiations, a lot of energy is spent on well-established pillars: fairness, transparency, rationality, warmth in the conventional sense. These matter enormously. But Edward's case points to something different: playfulness, and its cultural specificity.</p>
+
+          <p>Research from Harvard's Programme on Negotiation confirms that humour fosters positive emotion, reduces tension, and improves creative problem-solving at the bargaining table — but essentially only when it's contextually grounded. A well-timed joke demonstrates that you understand the room. A misplaced one can damage trust quickly and sometimes irreversibly.<sup>7</sup> While warmth is comforting, humour is more nuanced.</p>
+
+          <p>What makes Edward work is not just that he's funny — his humour is also recognisably Polish: a slightly dry irony and warmth without sentimentality. A literary character you want to have coffee with because his worldview is generous, and his lines are sharp.</p>
+
+          <p>Meanwhile, large-scale research on AI negotiation agents (based on the largest international AI negotiation competition conducted to date) found that warmth was a decisive factor in reaching agreements, comparable in importance to rational strategy.<sup>8</sup> Edward is, in his own street-level way, a proof of concept for the humorous part of that equation.</p>
+
+          <h2 class="blog-section-title">Training on imperfection: a second data point</h2>
+
+          <img src="assets/blog4_tennis_robot.png" alt="Humanoid robot playing tennis against a human player on an indoor court — LATENT Project" class="blog-body-image">
+          <p class="blog-image-caption">Image from LATENT Project Page</p>
+
+          <p>Here's where it gets technically interesting, and I think the implications reach beyond AI robotics. Researchers from Tsinghua University, Peking University and Galbot recently released LATENT: a system teaching a Unitree G1 to play competitive tennis against human players. The results are impressive: sustaining multi-shot rallies with reactive footwork is genuinely something. But the method is also intriguing: the robot was trained not on pristine, complete motion-capture sequences, but on imperfect human "motion fragments that capture the primitive skills used when playing tennis rather than precise and complete human-tennis motion sequences from real-world tennis matches" — making it move more like a human.</p>
+
+          <p>Their key insight: imperfect data still encodes meaningful priors about human movement. With correction and composition layered on top, the robot develops a policy that is both competent and natural-looking.<sup>9</sup></p>
+
+          <p>Could this extend to cognitive and social tasks in certain low-stakes domains? Could training on naturally messy, context-rich human interactions produce AI systems that are better at the trust-building we've been discussing? The competitive sports domain may be an interesting test case: robots are already being deployed in negotiation settings as opponents, coaches, and feedback mechanisms.<sup>10,11</sup></p>
+
+          <h2 class="blog-section-title">Conclusion: the case for "perfect imperfection"</h2>
+
+          <p>Both Edward and the LATENT tennis robot are pointing in the same direction. We have spent decades building AI systems that optimise for clean efficiency: perfect data, flawless execution, frictionless outputs. And we have watched, puzzled, as humans consistently preferred the messier, funnier, more uncertain version. The robot that complains it can't get to Choroszcz as it fails to climb the bus stairs. The one whose movement style feels like it learned in a park, not a lab.</p>
+
+          <p>I want to propose a view on this: <strong>"proper imperfection"</strong> for low-stakes and social domains — the right dose of human-like imperfection, humour, and situatedness. Not maximum messiness, rather <em>calibrated authenticity</em>.</p>
+
+          <p>In a period of dramatic increases in AI efficiency and productivity, this question becomes more urgent, not less. If systems exponentially get better at tasks, we ask what remains distinctively ours? And how do we design human-AI collaboration?</p>
+
+          <p>Some things worth sitting with:</p>
+          <ul>
+            <li>What would it mean to build AI systems that are funny in culturally specific, earned ways rather than algorithmically approximate ones?</li>
+            <li>Is the interspecies play framework — mutual willingness, role reversals, self-handicapping — a useful lens for human-AI interaction design?</li>
+            <li>As robots enter competitive sports as coaches and opponents, what happens to the texture of athletic development, rivalry, and identity?</li>
+          </ul>
+
+          <p>Edward Warchocki doesn't have the answers. But he's asking the right questions. In Polish, with excellent timing, and a remarkably straight face.</p>
+
+          <p><em>What do you think about this? Is playfulness and humour an underrated dimension of AI trust-building? I'd love to hear from practitioners and anyone who's ever seen a bear play with a dog.</em></p>
+
+          <hr class="blog-divider">
+
+          <h2 class="blog-section-title">References</h2>
+          <ol class="blog-references">
+            <li>Mori, M., et al. (1970/2012). "The Uncanny Valley." <em>IEEE Robotics &amp; Automation Magazine.</em> <a href="https://ieeexplore.ieee.org/document/6213238" target="_blank" rel="noopener noreferrer">ieeexplore.ieee.org</a></li>
+            <li>Mara, M. et al. (2022). "Human-Like Robots and the Uncanny Valley: A Meta-Analysis." <em>Zeitschrift für Psychologie.</em> <a href="https://econtent.hogrefe.com/doi/10.1027/2151-2604/a000486" target="_blank" rel="noopener noreferrer">hogrefe.com</a></li>
+            <li>Wikipedia. <a href="https://en.wikipedia.org/wiki/Uncanny_valley" target="_blank" rel="noopener noreferrer">Uncanny valley</a></li>
+            <li>Kang, H. et al. (2026). "Affective and Conversational Predictors of Re-Engagement in Human-Robot Interactions." <em>arXiv.</em> <a href="https://arxiv.org/abs/2503.16449" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+            <li>Kieson, E. (2025). "A Review of Interspecific Social Play Among Nonhuman Animals." <em>MDPI Veterinary Sciences.</em> <a href="https://www.mdpi.com/2306-7381/12/6/586" target="_blank" rel="noopener noreferrer">mdpi.com</a></li>
+            <li>"Interspecies Relational Theory: A Framework for Compassionate Interspecies Interactions." <em>MDPI Veterinary Sciences.</em></li>
+            <li>Harvard Programme on Negotiation. (2026). "Is Humor in Business Negotiation Ever Appropriate?" <a href="https://www.pon.harvard.edu/daily/negotiation-skills-daily/dear-negotiation-in-negotiation-make-em-laugh-nb/" target="_blank" rel="noopener noreferrer">pon.harvard.edu</a></li>
+            <li>Zhang, Z. et al. (2025). "Advancing AI Negotiations: New Theory and Evidence from a Large-Scale Autonomous Negotiation Competition." <em>arXiv.</em> <a href="https://arxiv.org/html/2503.06416v2" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+            <li>Zhang, Z. et al. (2026). "Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data." Tsinghua / Peking University / Galbot. <a href="https://arxiv.org/pdf/2603.12686" target="_blank" rel="noopener noreferrer">arXiv</a> · <a href="https://zzk273.github.io/LATENT/" target="_blank" rel="noopener noreferrer">Project page</a></li>
+            <li>Harvard Programme on Negotiation. (2026). "From Agent to Advisor: How AI Is Transforming Negotiation." <a href="https://www.pon.harvard.edu/daily/negotiation-skills-daily/from-agent-to-advisor-how-ai-is-transforming-negotiation/" target="_blank" rel="noopener noreferrer">pon.harvard.edu</a></li>
+            <li>Stanford HAI. (2025). "The Art of the Automated Negotiation." <a href="https://hai.stanford.edu/news/the-art-of-the-automated-negotiation" target="_blank" rel="noopener noreferrer">hai.stanford.edu</a></li>
+            <li>Unitree Robotics. <a href="https://www.unitree.com/g1/" target="_blank" rel="noopener noreferrer">Unitree G1 — Official Specifications</a></li>
+            <li>RobotsBeat. (March 2026). "Poland's First Humanoid Influencer Draws Brands and Millions of Views." <a href="https://robotsbeat.com/humanoid-robot-influencer-poland/" target="_blank" rel="noopener noreferrer">robotsbeat.com</a></li>
+          </ol>
+
+          <hr class="blog-divider">
+
+          <p class="blog-footer-note"><em>Originally published on LinkedIn · <a href="https://www.linkedin.com/pulse/playing-artificial-strangers-zoya-slavina-eigpf/" target="_blank" rel="noopener noreferrer">Read original article</a></em></p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Blog Modal 5: AI Ethics as a New Market Reality -->
+  <div class="blog-modal" id="blog-modal-5" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-5">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <img src="assets/blog5_header.png" alt="Abstract painting of human figures connected by neural network lines with AI data visualisations" class="blog-header-image">
+
+        <h1 class="blog-modal-title" id="blog-modal-title-5">AI Ethics as a New Market Reality: What the Data Reveals</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · March 2026</p>
+
+        <div class="blog-modal-body">
+          <p>46% of people trust AI. 66% use it daily anyway. 81% of consumers believe their data will be used in ways they're uncomfortable with, yet GenAI hit 40% household adoption in under two years — faster than the internet or the iPhone.</p>
+
+          <p>That gap — between what we believe and what we do — turns out to be one of the most commercially significant facts in tech right now.</p>
+
+          <p>I spent time going through dozens of empirical studies spanning 47 countries on AI ethics, trust, and market behaviour. The picture that emerged is more intriguing than I expected.</p>
+
+          <p>A few things that stayed with me:</p>
+
+          <ul>
+            <li>Anthropic captured 40% of enterprise LLM API spending in 2025. Its differentiator wasn't product features — it was safety positioning.</li>
+            <li>97% of websites deployed at least one dark pattern when users tried to make privacy-protective choices. Ethics isn't just a values question. It's a default settings question.</li>
+            <li>The US opposed a new multilateral AI governance mechanism at the UN. China supported it. The Netherlands Atlantic Commission warns this creates a leadership vacuum China is positioned to fill. Yet globally, people trust the EU more than the US or China to regulate AI — which is either reassuring or alarming depending on how you read Brussels right now.</li>
+            <li>A 2025 FAccT paper challenges the whole 'ethics-to-practice gap' framing — one that may be pushing companies away from trying to implement ethics at all.</li>
+          </ul>
+
+          <p>The full article covers the consumer paradox, three corporate stances on ethics as strategy, the underreported finding, and the geopolitical dimension.</p>
+
+          <hr class="blog-divider">
+
+          <p style="text-align: center;">
+            <a href="https://www.linkedin.com/pulse/ai-ethics-new-market-reality-what-data-reveals-zoya-slavina-bdb3f/" target="_blank" rel="noopener noreferrer" class="card-link" style="display: inline-block; padding: 0.75rem 1.5rem; font-size: 1rem;">Read full article on LinkedIn →</a>
+          </p>
         </div>
       </article>
     </div>
