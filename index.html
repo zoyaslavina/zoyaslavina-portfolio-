@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="photography/photography.css">
 </head>
 <body>
   <nav class="nav" aria-label="Main navigation">
@@ -23,7 +24,18 @@
     </div>
   </nav>
 
+  <div class="mode-switcher-bar" aria-label="Site mode">
+    <div class="mode-toggle" role="group">
+      <button class="mode-option mode-option--active" data-mode="work" aria-pressed="true">Research</button>
+      <div class="toggle-track" aria-hidden="true">
+        <div class="toggle-ball"></div>
+      </div>
+      <button class="mode-option" data-mode="photography" aria-pressed="false">Photography</button>
+    </div>
+  </div>
+
   <main>
+    <div id="panel-work" class="mode-panel">
     <!-- Hero/About Section -->
     <section id="about" class="section hero">
       <div class="hero-bg"></div>
@@ -46,10 +58,7 @@
 
         <div class="bio-container">
           <p class="bio-preview">
-            I'm an interdisciplinary researcher bridging <span class="highlight" data-highlight>international relations</span>,
-            <span class="highlight" data-highlight>sociology of technology</span>, and
-            <span class="highlight" data-highlight>human-computer interaction</span>.
-            My work focuses on observing real-world AI system behavior, analyzing societal impacts through empirical research, and understanding how technology and society co-evolve—examining beyond top-down policy, accounting for the power of bottom-up adoption patterns and industry dynamics that shape technological change.
+            Currently, I am a PhD researcher in <span class="highlight" data-highlight>International Relations</span> at the University of Białystok. My work sits at the intersection of IR theory, <span class="highlight" data-highlight>AI governance</span>, and the <span class="highlight" data-highlight>sociology of technology</span>; examining how power, perception, and dependency structures interact as AI becomes embedded in public institutions and society broadly. I approach these questions through a sociotechnical lens, drawing on constructivism alongside realist and interdependence frameworks.
           </p>
           <div class="scroll-indicator" id="scroll-indicator">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -59,16 +68,13 @@
           </div>
           <div class="bio-expanded" id="bio-expanded" aria-hidden="true">
             <p>
-              Currently pursuing a PhD in International Relations at the University of Białystok (Poland), I explore AI agents in governance, cross-cultural perspectives on AI values, and the minimal state capacity required for societies to effectively integrate AI systems. My IR and philosophy training gives me a "bird's eye view"—understanding how changes in one domain ripple across systems, how geopolitical and cultural contexts shape technology deployment, and how power dynamics (technical, economic, political) intersect.
+              My intellectual path ran through philosophy and AI ethics before bringing it into international relations, which means I came to questions of state power and technology governance having already spent years thinking about what AI systems actually do to the people and institutions that adopt them. That background shapes how I study sovereignty: not as an abstract legal concept but as something that either compounds or erodes depending on the governance choices states make, often saliently and before the consequences are visible.
             </p>
             <p>
-              My research examines how technological development, social norms, and political frameworks shape—and are shaped by—AI deployment and industry dynamics. When it comes to tech development, I'm particularly interested in how subtle differences in design affordances and interaction patterns can profoundly affect user experience across different cultural contexts. What fascinates me are questions many aren't yet asking: How do we develop "AI manners" as humans increasingly interact with AI agents? How can we make technical knowledge accessible so people understand their deep connection to technology? What does mutual progress (not competition) look like in AI research?
+              I am particularly drawn to the situation of smaller democratic states, as they face the dependency problem most acutely, have the least representation in AI governance discourse, and yet often possess the institutional agility that larger states lack. My research develops frameworks that are calibrated to their actual constraints rather than assuming ideal bureaucratic capacity.
             </p>
             <p>
-              As a bridge-builder between technical, public, and policy communities, I translate complex AI/ML concepts for diverse audiences—from policymakers and business stakeholders to students and general audiences. I believe that when people understand technology better, they can live happier, more informed lives. My work draws on frameworks from AI ethics, human-AI interaction, algorithmic accountability, explainability (XAI), and sociology of technology—applying these across disciplines: international relations, innovation governance and policymaking, cultural studies, and synthetic media.
-            </p>
-            <p>
-              I'm currently exploring Constitutional AI frameworks and evaluation methodologies, particularly interested in how agentic systems can be both scalable and ethically aligned. My research interests include emergent disruptive technologies (EDTs), quantifying mixed-initiative co-creativity in human-AI collaborations, and understanding interaction dynamics from multiple perspectives—how users perceive AI, how AI systems are designed to interpret user behavior, and the understudied question of how different interaction styles (from "you, robot, work!" to treating AI as a conversational partner) affect system performance and user experience. I'm also interested in exploring diverse AI approaches including open-source models and non-Western systems, finding ways to apply these insights to international relations and cross-disciplinary research.
+              I am also interested in the human side of this transition: how people perceive, resist, and adapt to AI systems (and technologies more generally), and how those interaction patterns shape adoption outcomes in ways that top-down governance rarely anticipates. Digital technologies do not land in a vacuum: they encounter existing cultural logics, social norms, and collective imaginaries that determine whether and how they take hold. The visions societies hold about technology, whether as threat, tool, or companion, are not merely rhetorical. They actively shape the conditions under which AI systems get deployed, contested, or quietly normalised. This is where sociology of technology and human-AI interaction research become indispensable complements to policy analysis.
             </p>
             <div class="bio-glow" aria-hidden="true"></div>
           </div>
@@ -383,6 +389,24 @@
         <div class="blog-scroll-wrapper" id="blog-scroll-wrapper">
         <div class="blog-grid">
           <article class="blog-card">
+            <span class="blog-date">June 3, 2026</span>
+            <h3 class="blog-title">A Second Brain for a Diplomat: What Comes Next?</h3>
+            <p class="blog-excerpt">
+              Dr Vivian Balakrishnan built a personal AI system on a Raspberry Pi that connects to WhatsApp, transcribes voice notes locally, builds a structured memory graph, and generates wiki pages. This is not a chatbot. It is a compartmentalised memory-and-action system, and it raises questions diplomacy has not had to answer before...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-7" aria-expanded="false" aria-controls="blog-modal-7">Instant View →</button>
+          </article>
+
+          <article class="blog-card">
+            <span class="blog-date">May 13, 2026</span>
+            <h3 class="blog-title">Five Governance Challenges for Public Sector Agentic AI: A Paper Review</h3>
+            <p class="blog-excerpt">
+              AI agents are already filing tax returns, drafting legal documents, and submitting applications on behalf of citizens. These are not edge cases. They are early signals of a structural shift in how citizens interact with the state...
+            </p>
+            <button class="card-link blog-instant-view" data-blog="blog-6" aria-expanded="false" aria-controls="blog-modal-6">Instant View →</button>
+          </article>
+
+          <article class="blog-card">
             <span class="blog-date">March 17, 2026</span>
             <h3 class="blog-title">Playing with Artificial Strangers</h3>
             <p class="blog-excerpt">
@@ -395,7 +419,7 @@
             <span class="blog-date">March 2026</span>
             <h3 class="blog-title">AI Ethics as a New Market Reality: What the Data Reveals</h3>
             <p class="blog-excerpt">
-              46% of people trust AI. 66% use it daily anyway. That gap — between what we believe and what we do — turns out to be one of the most commercially significant facts in tech right now...
+              46% of people trust AI. 66% use it daily anyway. That gap (between what we believe and what we do) turns out to be one of the most commercially significant facts in tech right now...
             </p>
             <button class="card-link blog-instant-view" data-blog="blog-5" aria-expanded="false" aria-controls="blog-modal-5">Instant View →</button>
           </article>
@@ -435,6 +459,8 @@
     <section id="reading" class="section">
       <div class="container">
         <h2 class="section-title">Recent Reading</h2>
+        <p class="timeline-hint">Drag to scroll →</p>
+        <div class="books-scroll-wrapper">
         <div class="books-grid">
           <article class="book-card">
             <img class="book-cover" src="assets/Book_chip_war_cover.webp" alt="Chip War book cover">
@@ -442,7 +468,7 @@
             <h3 class="book-title">Chip War: The Fight for the World's Most Critical Technology</h3>
             <p class="book-author">by Chris Miller</p>
             <p class="book-note">
-              Beyond technical significance, semiconductors act as critical tools for political power—recognized by some nations, overlooked by others. Reading in Polish bridged my technical vocabulary between languages, essential since I work primarily in English despite being Polish.
+              Beyond technical significance, semiconductors act as critical tools for political power, recognized by some nations, overlooked by others. Reading in Polish bridged my technical vocabulary between languages, essential since I work primarily in English despite being Polish.
             </p>
           </article>
 
@@ -452,7 +478,16 @@
             <h3 class="book-title">Information and Society</h3>
             <p class="book-author">by Michael Buckland</p>
             <p class="book-note">
-              The "information society" has always existed—what changes is how we store, share, copy, and remix. Beyond technical aspects of managing and retrieval, this explores how information's social and personal dimensions shape action.
+              The "information society" has always existed. What changes is how we store, share, copy, and remix. Beyond technical aspects of managing and retrieval, this explores how information's social and personal dimensions shape action.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <img class="book-cover" src="assets/book_deep_work.jpg" alt="Deep Work book cover">
+            <h3 class="book-title">Deep Work</h3>
+            <p class="book-author">by Cal Newport</p>
+            <p class="book-note">
+              The framework for deep, elite-quality work is invaluable. Newport's critical eye on modern work culture and the tech industry is what makes this more than a productivity book.
             </p>
           </article>
 
@@ -461,7 +496,7 @@
             <h3 class="book-title">How to Win Friends and Influence People</h3>
             <p class="book-author">by Dale Carnegie</p>
             <p class="book-note">
-              Actually listening to people's worries, then respectfully explaining while relating to their experiences. Recognizing we all have our own truth—what's "right" is relational. When explaining complex concepts, consider how it fits their world, not mine.
+              Actually listening to people's worries, then respectfully explaining while relating to their experiences. Recognizing we all have our own truth: what's "right" is relational. When explaining complex concepts, consider how it fits their world, not mine.
             </p>
           </article>
 
@@ -470,7 +505,7 @@
             <h3 class="book-title">Unfair Advantage</h3>
             <p class="book-author">by Ash Ali & Hasan Kubba</p>
             <p class="book-note">
-              Recognizing where my strengths lie, even when I don't quite see them. Beyond growth advice, it's about partnerships—becoming stronger by complementing each other's unfair advantages.
+              Recognizing where my strengths lie, even when I don't quite see them. Beyond growth advice, it's about partnerships, becoming stronger by complementing each other's unfair advantages.
             </p>
           </article>
 
@@ -479,10 +514,11 @@
             <h3 class="book-title">Is Technology Making Us Sick?</h3>
             <p class="book-author">by Ian Douglas</p>
             <p class="book-note">
-              Transparency noted as critical for addressing challenges people face with technologies—including how it makes them feel, sometimes literally sick. Well-researched, with the author's clear position combining opinion with findings. Got it in London for £3.
+              Transparency noted as critical for addressing challenges people face with technologies, including how it makes them feel, sometimes literally sick. Well-researched, with the author's clear position combining opinion with findings. Got it in London for £3.
             </p>
           </article>
-        </div>
+        </div><!-- end books-grid -->
+        </div><!-- end books-scroll-wrapper -->
       </div>
     </section>
 
@@ -535,6 +571,35 @@
         </button>
       </div>
     </section>
+    </div><!-- end #panel-work -->
+
+    <div id="panel-photography" class="mode-panel">
+      <section id="photo-intro" class="section">
+        <div class="container" style="padding-top: 4rem; text-align: center; max-width: 600px; margin: 0 auto;">
+          <h1 class="photo-page-title">Street Photography</h1>
+          <p class="photo-tagline">Shot on film. Printed straight.</p>
+          <p class="photo-intro-text">I shoot on film, mostly Kodak Gold 400 and Ilford HP5 400, though you'll find other emulsions here too. My contrast is built in the process: forcing or pulling the film in development, playing with light before the shutter clicks. Of the images here, four are edited, as a deliberate stylistic choice. The rest are as the film found them. Street photography means people, and people require a careful approach: quick enough to catch them before they notice, careful enough not to hurt them. I try to be playful but respectful, kind but unapologetic. What I'm after is the captured moment just before meaning settles: the image you take in a second and spend years looking into.</p>
+          <p class="photo-gallery-note">Gallery updates daily. Come back tomorrow.</p>
+        </div>
+      </section>
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="likes-bar" id="likes-bar">
+            <span id="likes-counter">0 / 3 likes used today</span>
+            <div class="pips">
+              <span class="pip" id="like-pip-0"></span>
+              <span class="pip" id="like-pip-1"></span>
+              <span class="pip" id="like-pip-2"></span>
+            </div>
+          </div>
+
+          <div class="photo-grid" id="photo-grid" role="list" aria-label="Photo gallery"></div>
+
+          <p class="exhausted-note" id="exhausted-note">All 3 likes used. Undo one if you change your mind, or come back tomorrow.</p>
+        </div>
+      </section>
+    </div><!-- end #panel-photography -->
+
   </main>
 
   <footer class="footer">
@@ -571,9 +636,11 @@
         <p class="blog-modal-meta">By Zoya Slavina · January 25, 2026</p>
 
         <div class="blog-modal-body">
+          <p class="blog-source-note"><em>Originally published on LinkedIn.</em></p>
+
           <h2 class="blog-section-title">Closing My Own Capabilities Gap</h2>
 
-          <p>I learned Claude Code and Cursor on Saturday morning and shipped my complete website by Sunday afternoon. In between, I went for coffee and hit the gym—no panic, no rush, just inspired action fueled by quiet confidence in the tools I was learning to use. I decided to take the rate limit message "hit your limit · resets 4pm (Europe/Warsaw)" to be less a frustration and more a gentle forcing function for sustainable work. This weekend wasn't just about building a website; it was about experiencing firsthand the <strong>capabilities gap</strong> I've been seeing and researching theoretically—the distance between what AI tools can do and what users actually leverage.</p>
+          <p>I learned Claude Code and Cursor on Saturday morning and shipped my complete website by Sunday afternoon. In between, I went for coffee and hit the gym, no panic, no rush, just inspired action fueled by quiet confidence in the tools I was learning to use. I decided to take the rate limit message "hit your limit · resets 4pm (Europe/Warsaw)" to be less a frustration and more a gentle forcing function for sustainable work. This weekend wasn't just about building a website; it was about experiencing firsthand the <strong>capabilities gap</strong> I've been seeing and researching theoretically: the distance between what AI tools can do and what users actually leverage.</p>
 
           <h2 class="blog-section-title">The Shift That Changed Everything</h2>
 
@@ -585,41 +652,41 @@
 
           <p>Fair enough. But then I asked a simple question: "What is the application deadline?"</p>
 
-          <p>What happened next was remarkable. Claude reconsidered—not because I defended myself or explained why I was qualified, but because it took a second look at the role itself:</p>
+          <p>What happened next was remarkable. Claude reconsidered. Not because I defended myself or explained why I was qualified, but because it took a second look at the role itself:</p>
 
           <blockquote class="blog-quote">
-            "Looking at this specific role more carefully, it might actually be more compatible with your background than I initially thought... This completely changes the picture. You're actually a strong candidate for this specific role—you just don't realize it yet."
+            "Looking at this specific role more carefully, it might actually be more compatible with your background than I initially thought... This completely changes the picture. You're actually a strong candidate for this specific role. You just don't realize it yet."
           </blockquote>
 
-          <p>This pivot—this willingness to reevaluate initial assumptions—was a profound "aha moment" for me. It revealed something about Claude's architecture, the Constitutional AI framework underlying it, and the thoughtful approach of the people building it. The system didn't just follow a script but has reflected, reconsidered, and adapted. This change gave me confidence not just about the application, but about what I was about to attempt: learning new tools and building something real in a single weekend.</p>
+          <p>This pivot, this willingness to reevaluate initial assumptions, was a profound "aha moment" for me. It revealed something about Claude's architecture, the Constitutional AI framework underlying it, and the thoughtful approach of the people building it. The system didn't just follow a script but has reflected, reconsidered, and adapted. This change gave me confidence not just about the application, but about what I was about to attempt: learning new tools and building something real in a single weekend.</p>
 
           <p>(And yes, my partner's encouragement helped too!)</p>
 
           <h2 class="blog-section-title">Parallel Workflows: The New Atomic Habits</h2>
 
-          <p>Six years ago, I completed a full-stack development course. A couple years ago, I dabbled in creative coding. But it would have been a stretch to call myself a developer—even an amateur one. This weekend changed that.</p>
+          <p>Six years ago, I completed a full-stack development course. A couple years ago, I dabbled in creative coding. But it would have been a stretch to call myself a developer, even an amateur one. This weekend changed that.</p>
 
           <p>What made the difference wasn't just the tools (Claude Code and Cursor), but the mental model shift they enabled. I could work on my website while simultaneously preparing application materials, perfecting my CV, and learning about the position. While Claude Code was building components or debugging, I was researching Anthropic's papers, refining my cover letter, or simply taking necessary breaks.</p>
 
-          <p>This is what I've been calling the "capabilities gap" in my research: the widening distance between what AI systems can do and how users actually leverage them. It's not just about knowing features exist—it requires a fundamental mindset shift. As <a href="https://www.interconnects.ai/p/getting-good-at-agents" target="_blank" rel="noopener noreferrer">Nathan Lambert writes</a>, we're still "getting good at agents," learning new ways of doing things. For me, that meant developing new atomic habits: "while I do this, the agent builds that" requires planning skills, project management, and trusting the system enough to work in parallel rather than sequentially.</p>
+          <p>This is what I've been calling the "capabilities gap" in my research: the widening distance between what AI systems can do and how users actually leverage them. It's not just about knowing features exist. It requires a fundamental mindset shift. As <a href="https://www.interconnects.ai/p/getting-good-at-agents" target="_blank" rel="noopener noreferrer">Nathan Lambert writes</a>, we're still "getting good at agents," learning new ways of doing things. For me, that meant developing new atomic habits: "while I do this, the agent builds that" requires planning skills, project management, and trusting the system enough to work in parallel rather than sequentially.</p>
 
           <h2 class="blog-section-title">Practical Insights: What I Learned</h2>
 
-          <p><strong>On tool selection:</strong> I quickly learned to match tasks to capabilities. Claude excels at reasoning and composition—complex problem-solving, architectural decisions, nuanced writing. For simpler, more mechanical tasks, I'd use ChatGPT or other tools (of course, I didn't tell GPT I'm applying to Anthropic to prevent any sabotage). This isn't about one being "better"—it's about understanding what each tool does best and orchestrating accordingly.</p>
+          <p><strong>On tool selection:</strong> I quickly learned to match tasks to capabilities. Claude excels at reasoning and composition: complex problem-solving, architectural decisions, nuanced writing. For simpler, more mechanical tasks, I'd use ChatGPT or other tools (of course, I didn't tell GPT I'm applying to Anthropic to prevent any sabotage). This isn't about one being "better". It's about understanding what each tool does best and orchestrating accordingly.</p>
 
-          <p><strong>On Claude Code specifically:</strong> One surprising discovery—when I tried copying longer text passages to fill website sections, Claude Code would sometimes didn't get the complete version. The more effective strategy? Taking screenshots of the text and pasting those instead. A small workaround, but it reveals something about how these tools interpret different input formats.</p>
+          <p><strong>On Claude Code specifically:</strong> One surprising discovery: when I tried copying longer text passages to fill website sections, Claude Code would sometimes didn't get the complete version. The more effective strategy? Taking screenshots of the text and pasting those instead. A small workaround, but it reveals something about how these tools interpret different input formats.</p>
 
           <p><strong>On rate limits as design:</strong> The Pro plan's message limits became a feature, not a bug. They enforced breaks between working sessions, preventing burnout and giving me time to reflect on what I was building. Constraints can be generative.</p>
 
           <h2 class="blog-section-title">From Theory to Practice: Living My Research</h2>
 
-          <p>The irony isn't lost on me: I study human-AI co-creativity, interaction patterns, and how users develop mental models for AI systems—and this weekend was among those moments when I experienced all of it firsthand. I became my own case study. In <a href="https://doi.org/10.13140/RG.2.2.31725.86248" target="_blank" rel="noopener noreferrer">my master's thesis</a>, I analyzed co-creative practices with AI through HCI and art therapy frameworks, examining cognitive states activated during collaborative creation. I found that users prefer maintaining strong control while expecting substantial support from AI systems. Well, I believe I still managed to form a partnership while leading Claude toward my vision: I made all architectural decisions, but Claude handled implementation details, debugging, and optimization. The mixed-initiative balance worked because the tools respected my agency while augmenting my capabilities.</p>
+          <p>The irony isn't lost on me: I study human-AI co-creativity, interaction patterns, and how users develop mental models for AI systems. This weekend was among those moments when I experienced all of it firsthand. I became my own case study. In <a href="https://doi.org/10.13140/RG.2.2.31725.86248" target="_blank" rel="noopener noreferrer">my master's thesis</a>, I analyzed co-creative practices with AI through HCI and art therapy frameworks, examining cognitive states activated during collaborative creation. I found that users prefer maintaining strong control while expecting substantial support from AI systems. Well, I believe I still managed to form a partnership while leading Claude toward my vision: I made all architectural decisions, but Claude handled implementation details, debugging, and optimization. The mixed-initiative balance worked because the tools respected my agency while augmenting my capabilities.</p>
 
-          <p>This experience also connects to emerging research directions I'm exploring. Dario Amodei recently identified "AI building AI" as a key research area for 2026. I just lived it—using Claude to build digital artifacts (my website), which itself required Claude to generate code, design systems, and solve technical problems. The human role shifted from implementation to orchestration, from coding to guiding, from building to designing.</p>
+          <p>This experience also connects to emerging research directions I'm exploring. Dario Amodei recently identified "AI building AI" as a key research area for 2026. I just lived it, using Claude to build digital artifacts (my website), which itself required Claude to generate code, design systems, and solve technical problems. The human role shifted from implementation to orchestration, from coding to guiding, from building to designing.</p>
 
           <h2 class="blog-section-title">What's Next: Creative Coding and Beyond</h2>
 
-          <p>I'm already thinking about what else becomes possible. Creative coding, for instance—I got super curious to test Claude Code for live VJ performances, producing visuals from code on-the-go. This wouldn't just be entertaining; it would be an interesting research project in itself. Using the interface (whether Claude Code, Cursor, or something else) as a mixed-initiative creative tool during live performance would reveal fascinating insights about real-time human-AI collaboration under time pressure.</p>
+          <p>I'm already thinking about what else becomes possible. Creative coding, for instance. I got super curious to test Claude Code for live VJ performances, producing visuals from code on-the-go. This wouldn't just be entertaining; it would be an interesting research project in itself. Using the interface (whether Claude Code, Cursor, or something else) as a mixed-initiative creative tool during live performance would reveal fascinating insights about real-time human-AI collaboration under time pressure.</p>
 
           <p>More broadly, this weekend taught me that the capabilities gap isn't just an abstract research concept—it's something we all navigate daily. The tools exist. The challenge is developing the mental models, workflows, and "AI manners" (as I've been calling them, I am still guided by <em>the etiquette</em> when interaction with AI) to effectively collaborate with increasingly capable systems. It requires rethinking not just how we work, but how we think about work itself.</p>
 
@@ -657,6 +724,8 @@
         <p class="blog-modal-meta">By Zoya Slavina · January 20, 2026</p>
 
         <div class="blog-modal-body">
+          <p class="blog-source-note"><em>Originally published on LinkedIn.</em></p>
+
           <p>Scientific diplomacy is gaining clear momentum. In Poland and internationally, it is increasingly recognised as a critical area at the intersection of research, education, technology, and international affairs. As technological development accelerates and translates into political and strategic influence, public awareness is also growing: innovation is driven by research, science, and advanced education.</p>
 
           <p>In this context, in December I had the pleasure of taking part in a panel discussion on scientific diplomacy, alongside two esteemed professors from our university. I would like to thank the <strong>Regionalny Ośrodek Debaty Międzynarodowej</strong> (Center for International Debate) for the invitation and for the opportunity to contribute as a member of the International Relations Department and as the Rector's representative.</p>
@@ -691,7 +760,9 @@
         <p class="blog-modal-meta">By Zoya Slavina · September 2025</p>
 
         <div class="blog-modal-body">
-          <p>How does digitalization transform diplomacy and what role might AI play in embassies?</p>
+          <p class="blog-source-note"><em>Originally published on LinkedIn.</em></p>
+
+          <p>How does digitalization transform diplomacy and what role might AI play in embassies?</p></p>
 
           <p>During a recent visit to the German Embassy in Warsaw, organized by the <strong>Union of Sisterhood Foundation</strong>, we were able to talk about the professional and personal sides of diplomatic work. The discussion was both informative and honest, covering everything from Polish-German collaboration and the role of women in politics to the daily life of a diplomat.</p>
 
@@ -729,6 +800,8 @@
         <p class="blog-modal-meta">By Zoya Slavina · March 17, 2026</p>
 
         <div class="blog-modal-body">
+          <p class="blog-source-note"><em>This is a copy of the original publication on LinkedIn. The original article is available <a href="https://www.linkedin.com/pulse/playing-artificial-strangers-zoya-slavina-eigpf/" target="_blank" rel="noopener noreferrer">here</a>.</em></p>
+
           <p><em>What a Polish Celebrity and "Imperfect" Tennis-Playing Robot Reveal About the Future of Collaboration with Robots</em></p>
 
           <p>I promise this post will be interesting, whatever your industry! <em>Note: This post is research-driven. For those curious, full references are listed at the end.</em></p>
@@ -846,6 +919,8 @@
         <p class="blog-modal-meta">By Zoya Slavina · March 2026</p>
 
         <div class="blog-modal-body">
+          <p class="blog-source-note"><em>This is a copy of the original publication on LinkedIn. The original article is available <a href="https://www.linkedin.com/pulse/ai-ethics-new-market-reality-what-data-reveals-zoya-slavina-bdb3f/" target="_blank" rel="noopener noreferrer">here</a>.</em></p>
+
           <p>46% of people trust AI. 66% use it daily anyway. 81% of consumers believe their data will be used in ways they're uncomfortable with, yet GenAI hit 40% household adoption in under two years — faster than the internet or the iPhone.</p>
 
           <p>That gap — between what we believe and what we do — turns out to be one of the most commercially significant facts in tech right now.</p>
@@ -873,6 +948,260 @@
     </div>
   </div>
 
+  <!-- Blog Modal 7 -->
+  <div class="blog-modal" id="blog-modal-7" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-7">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <img src="assets/blog7-diplomat-header2%20copy.png" alt="Diplomat with AI knowledge graph visualisation" class="blog-header-image">
+
+        <h1 class="blog-modal-title" id="blog-modal-title-7">A Second Brain for a Diplomat: What Comes Next?</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · June 3, 2026</p>
+
+        <div class="blog-modal-body">
+
+          <p class="blog-source-note"><em>This is a copy of the original publication on LinkedIn. The original article is available <a href="https://www.linkedin.com/pulse/second-brain-diplomat-what-comes-next-zoya-slavina-kfvaf/" target="_blank" rel="noopener noreferrer">here</a>.</em></p>
+
+          <p><em>On the social, technical, and political dimensions of Vivian Balakrishnan's personal AI agent</em></p>
+
+          <p>The world of diplomacy has changed forever. And for once, that might actually be a fair thing to say.</p>
+
+          <p>At AI Engineer Singapore in May 2026, Dr Vivian Balakrishnan (Singaporean Minister of Foreign Affairs) presented something unusual: not a government AI strategy deck, but a working personal AI system. His "second brain" runs on a Raspberry Pi with eight gigabytes of RAM. It connects to WhatsApp, ingests speeches and articles, transcribes voice notes locally, builds a structured memory graph, and generates wiki-like pages in Obsidian.</p>
+
+          <p>This article unpacks the philosophy behind the project (its social, technical, and political significance for diplomatic innovation), walks through the architecture and what "self-hosted" actually means in practice, and offers three directions for advancing diplomatic AI that emerged from my own reading of the system.</p>
+
+          <p>The most important thing about this is not the technology stack. It is the philosophy behind it.</p>
+
+          <p>Dr Balakrishnan's core argument is that the real value from AI will not come from top-down national strategies alone. It will come from individuals who know their work and create their own workflows. Teachers, lawyers, doctors, diplomats. His position is that you cannot govern a technology you have only been briefed on. You have to use it. You have to break it (and debug it). You have to understand what it can and cannot do from the inside.</p>
+
+          <p>As a retired eye surgeon turned foreign minister, he frames this through a surgical metaphor: there is no such thing as a routine operation. Things will go wrong. When they do, you want them to break within barriers. That sentence carries more security intuition than many government AI policy briefs I have read.</p>
+
+          <h2 class="blog-section-title">What He Actually Built (and What "Self-Hosted" Means)</h2>
+
+          <p>Before walking through the stack, it is worth clarifying what "self-hosted" means here, because the distinction matters for anyone thinking about sensitive deployments.</p>
+
+          <p>The orchestrator, memory graph (knowledge map), voice transcription, and embeddings (meaning-based search) all run locally on the Raspberry Pi. No audio or private text leaves the device. No documents are sent to a cloud embedding provider. Containers never see raw API keys, which is a meaningful security architecture.</p>
+
+          <p>But inference (the part where the model reads your context and generates a response) still happens via API calls to Claude. The locally stored facts and memory graph entries are injected into the prompt as context before the model responds. Even though the data lives on your device, the model provider sees whatever context the agent sends during inference.</p>
+
+          <p>This is not a flaw. It is a design trade-off worth clarifying because it shapes the security profile depending on what material enters the memory graph. Cloud-first risk means data is exposed to the platform, vendor, embeddings provider, logs, and third-party APIs. Local-first risk means data is concentrated on the endpoint, sync bridge, local filesystem, and agent tools. The attack surface is narrower but physically concentrated. Neither model is inherently safer. They just fail differently.</p>
+
+          <h2 class="blog-section-title">The Stack</h2>
+
+          <img src="assets/blog7-tech_stack_singapore.png" alt="Dr Balakrishnan's presentation at AI Engineer Singapore showing the NanoClaw stack" class="blog-body-image">
+
+          <p>NanoClaw (the orchestrator, a lightweight OpenClaw alternative) is a Node.js/TypeScript platform that routes messages between WhatsApp (via Baileys, replacing the WhatsApp Business API), Claude (via the Agent SDK running in isolated Docker containers per group), and a custom knowledge graph called mnemon. Each WhatsApp group gets its own container with its own local memory store. Groups cannot read each other's messages or memory.</p>
+
+          <p>The memory architecture is where it gets interesting. This is not standard RAG (retrieval-augmented generation), where you dump documents into a vector store and retrieve raw chunks. Instead, the system uses mnemon to extract discrete facts, relationships, timestamps, and importance scores from raw sources (speeches, articles, transcripts) into a structured graph database, compiled into narrative wiki-pages organised by entity, concept, and timeline in Obsidian.</p>
+
+          <blockquote class="blog-quote">Claude touches ingested content twice: first during extraction, reading the full document to pull out structured facts, and again at query time, when retrieved facts are injected as context before the agent responds. The embedding and search steps in between run entirely locally via Ollama and never leave the device.</blockquote>
+
+          <p>Voice transcription runs locally via whisper.cpp. Embeddings run locally via Ollama with nomic-embed-text. Credential proxying through OneCLI means containers never see raw API keys. The whole thing runs on a Raspberry Pi.</p>
+
+          <p>The result is an agent that accumulates knowledge over time, surfaces what it knows automatically, and can cite specific stored facts when it responds. Dr Balakrishnan said he is visiting twelve countries in a single month, each requiring knowledge of hundreds of people, their histories, their countries' politics, and the relational context between them.</p>
+
+          <h2 class="blog-section-title">Why This Matters for Diplomacy</h2>
+
+          <img src="assets/blog7-diplomats.png" alt="Diplomatic meeting with AI assistance overlays" class="blog-body-image">
+
+          <p>Diplomacy is one of the most memory-intensive professions that exists. A diplomat preparing for a bilateral or multilateral meeting needs to hold in mind the counterpart's background, prior interactions, the current state of several policy threads, recent public statements, domestic political pressures on both sides, and the relational history between the two countries. Multiply that by twelve countries in a month.</p>
+
+          <p>The classical solution is the briefing pack: a document prepared by staff, read before the meeting, largely forgotten afterward. What Dr Balakrishnan's system does differently is make that knowledge persistent, searchable, and compounding. It does not replace the diplomat's judgment. It augments the diplomat's recall.</p>
+
+          <p>This is not a chatbot. It is a compartmentalised memory-and-action system.</p>
+
+          <h2 class="blog-section-title">The Questions This Opens Up</h2>
+
+          <img src="assets/blog7-diplomat-security.png" alt="Security and trustworthy AI governance for diplomatic AI" class="blog-body-image">
+
+          <p>Dr Balakrishnan was direct about the security posture. During his speech, he noted that if you hack his system, "the most you will get is my phone number" and summaries of Singapore foreign policy he has curated from public sources anyway. That is a sound principle for the current prototype.</p>
+
+          <p>But it raises a question I kept returning to: if the local memory stores contain anything beyond public material, those entries are still sent to Claude's API as context during inference. The local storage protects against cloud platform exposure and third-party logging, but it does not prevent the model provider from receiving whatever the agent includes in the prompt. Also, the correlations and collections of facts that he builds can prove highly valuable in themselves. The security guarantee depends on what goes into the memory graph in the first place.</p>
+
+          <p>In diplomatic AI, the danger is not only data storage. It is semantic recombination: an assistant that connects articles, meetings, people, messages, events, and drafts may create intelligence from fragments. That intelligence should be governed as carefully as the original documents.</p>
+
+          <p><strong>The memory scope question.</strong> The system describes two memory tiers: global (shared knowledge, read-only for non-main agents) and local (per-group, writable only by that group's agent). If global memory contains only public speeches and published articles, the risk profile is limited. But the moment the graph includes meeting transcripts, private notes, relationship histories, or transcribed voice memos, the security question changes. A vector search does not understand diplomatic classification. Asked about a person, it may retrieve a public article, a private meeting note, a speech draft, and a WhatsApp comment in the same breath.</p>
+
+          <p><strong>The retrieval order question.</strong> In the current design, every agent invocation triggers a semantic recall against the knowledge graph, and relevant facts are injected as context. For mixed-sensitivity material, the safer sequence could be: filter by access level and sensitivity class before retrieval happens, authenticate the sender, identify which memory compartments are permitted, and search only within those compartments. The alternative, searching all memory semantically and then relying on the model not to reveal sensitive details, inverts the security logic.</p>
+
+          <p>None of these are criticisms of the project. They are the questions that the project makes concrete, and that is part of its learning value.</p>
+
+          <h2 class="blog-section-title">Three Points for Advancing Diplomatic AI</h2>
+
+          <img src="assets/blog7-three_directions_diplomatic_ai.png" alt="Three directions for advancing diplomatic AI: memory governance, compartmentalisation, transparency" class="blog-body-image">
+
+          <p><strong>1. Memory governance as a first-class design problem.</strong> Diplomatic AI is not just about inference. It is about memory: what is stored, how it is classified, who can retrieve it, and under what conditions. Every memory item should carry metadata: source, date, author, classification, allowed users, allowed purposes, retention period, and provenance. The retrieval system should respect those boundaries before the model ever sees the content.</p>
+
+          <p><strong>2. Compartmentalisation beyond containers.</strong> Dr Balakrishnan's design already isolates groups into separate Docker containers with separate memory stores. That is a strong foundation. The next step could be extending that compartmentalisation into the memory layer itself and into the inference boundary. A general research chat should not be able to retrieve notes from a closed-door meeting. The audit question is not "is the system self-hosted?" but "what can this particular chat retrieve, infer, and send, and how much of that context reaches the model provider?"</p>
+
+          <p><strong>3. Transparency as a diplomatic norm, not just a technical feature.</strong> Dr Balakrishnan's decision to publish his code and speak openly about his architecture is itself a diplomatic act. It sets a precedent: that AI adoption by officials can be discussed publicly, that the architecture can be scrutinised, and that experimentation is compatible with accountability. If diplomatic AI develops behind closed doors, it will be governed by whoever happens to build it first. If it develops in the open, with shared architectural principles and public discussion of security trade-offs, it has a better chance of being enhanced. The future diplomatic AI assistant is not just a technical system, but a governance question too.</p>
+
+          <h2 class="blog-section-title">What Stays with Me</h2>
+
+          <p>There is a line from the talk that keeps surfacing in my thinking. Dr Balakrishnan described the current moment as one where "the barriers have collapsed." The tools exist. The cost is minimal. A Raspberry Pi and open-source software can give a foreign minister a personal knowledge system that would have required a team of engineers five years ago.</p>
+
+          <p>What has not collapsed is the governance layer. Memory classification, retrieval permissions, output controls, audit logging, human approval gates, and the question of what reaches the model provider during inference. These are not solved problems. They are emerging ones, and they are emerging precisely because the tools have become powerful enough to make them real.</p>
+
+          <p>The value of Dr Balakrishnan's project is not that it answers all of these questions. It is that it makes them concrete, practical, and impossible to ignore.</p>
+
+          <p>Tools matter more than models, he said. I would add: architecture matters more than tools.</p>
+
+          <h2 class="blog-section-title">Useful Links</h2>
+
+          <p>Balakrishnan, V. (2026). Speech at AI Engineer Singapore, 16 May 2026. Ministry of Foreign Affairs, Singapore.</p>
+          <p>Balakrishnan, V. (2026). NanoClaw — Personal Claude Assistant (second brain for a diplomat). GitHub Gist.</p>
+          <p><a href="https://www.youtube.com/watch?v=YOUR_LINK" target="_blank" rel="noopener noreferrer">AI Engineer Singapore (2026). Building a "Second Brain": Opportunities, Risks, and Implications for AI Adoption in Singapore. YouTube.</a></p>
+
+          <hr class="blog-divider">
+
+          <p style="text-align: center;">
+            <a href="https://www.linkedin.com/pulse/second-brain-diplomat-what-comes-next-zoya-slavina-kfvaf/" target="_blank" rel="noopener noreferrer" class="card-link" style="display: inline-block; padding: 0.75rem 1.5rem; font-size: 1rem;">Read full article on LinkedIn →</a>
+          </p>
+
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Blog Modal 6 -->
+  <div class="blog-modal" id="blog-modal-6" aria-hidden="true" role="dialog" aria-labelledby="blog-modal-title-6">
+    <div class="blog-modal-overlay"></div>
+    <div class="blog-modal-content">
+      <header class="blog-modal-header">
+        <button class="blog-modal-close" aria-label="Close">&times;</button>
+        <span class="blog-modal-badge">⚡ Instant View</span>
+      </header>
+
+      <article class="blog-modal-article">
+        <img src="assets/blog6-header1%20copy.png" alt="Five Governance Challenges — header illustration" class="blog-header-image">
+
+        <h1 class="blog-modal-title" id="blog-modal-title-6">Five Governance Challenges for Public Sector Agentic AI: A Paper Review with Estonia as a Living Case Study</h1>
+        <p class="blog-modal-meta">By Zoya Slavina · May 13, 2026</p>
+
+        <div class="blog-modal-body">
+
+          <p class="blog-source-note"><em>This is a copy of the original publication on LinkedIn. The original article is available <a href="https://www.linkedin.com/pulse/five-governance-challenges-public-sector-agentic-ai-paper-slavina-r5gbf/" target="_blank" rel="noopener noreferrer">here</a>.</em></p>
+
+          <p>AI agents are already filing tax returns, drafting legal documents, and submitting applications on behalf of citizens. In the United States, courts have seen multiple notable instances of AI-generated filings, some containing fabricated case citations, prompting several jurisdictions to introduce AI disclosure rules. In France, developers are independently building MCP servers and AI agent skills so that Claude can calculate French taxes using publicly available DGFiP source code, without official government endorsement. In Estonia, in March 2026, developer Stefano Amorelli demonstrated Claude Code executing tax payments through the country's Tax and Customs Board (MTA) and LHV bank with no human touching a user interface. Rather than a standard government process, it was a proof-of-concept with the technical achievements making the broader point.</p>
+
+          <p>These are not edge cases. They are early signals of a structural shift in how citizens interact with the state. The question is whether public sector organisations (PSOs) are catching up with the governance architecture this requires.</p>
+
+          <p>This piece reviews a recent academic paper by Chris Schmitz, Jonathan Hvithamar Rystrøm, and Jan Batzner on agentic AI oversight in PSOs and puts it in conversation with a follow-up published this month by Luukas Ilves and Ott Velsberg on Estonia's progress against the 12-layer "Agentic State" framework.</p>
+
+          <p>While the hook above spans the US, France and Estonia, the case study analysis here focuses on Estonia, where the response to this structural shift is most visible and best documented to date. The paper identifies five governance challenges that PSOs need to address. Estonia is a case study that maps onto each one, illustrating how the governance architecture described in research is shaped in practice and where the observed differences are. As of this week, the timing is especially relevant: Estonia officially approved its new Digital State Agenda for 2026–2035, placing AI adoption in public and private sectors at the centre of national strategy for the next decade.</p>
+
+          <h2 class="blog-section-title">1. The Paper: Five Challenges for PSOs</h2>
+
+          <p>Schmitz et al. interviewed civil servants from six German federal, state, and municipal agencies, asking how existing AI governance practices map onto the requirements of agentic AI deployment. Their core finding: <strong>agentic AI does not introduce entirely new governance problems. It intensifies the ones PSOs already have.</strong></p>
+
+          <img src="assets/blog6-govai_challenges%20copy.png" alt="Five governance challenges for responsible AI agent deployment" class="blog-body-image">
+
+          <p>The five governance areas they identify as essential for responsible agent deployment are:</p>
+
+          <p><strong>Cross-departmental implementation:</strong> coordinating responsibilities across organisational units, since agent systems span multiple components and data sources.</p>
+
+          <p><strong>Comprehensive evaluation:</strong> pre-deployment testing that is system-level, task-specific, and designed in close collaboration with the operational workers who will use the system.</p>
+
+          <p><strong>Enhanced security protocols:</strong> addressing novel risks from agent autonomy (jailbreaking, data exfiltration, DDoS exposure) through cross-departmental threat mapping and red-teaming.</p>
+
+          <p><strong>Operational visibility:</strong> visibility at the system level (agent indexes, model cards) and at the operational level (real-time monitoring) to enable both organisational awareness and intervention in misbehaving systems.</p>
+
+          <p><strong>Systematic auditing:</strong> building external compliance validation on top of the previous capacities.</p>
+
+          <p>The interview findings are thought-provoking but align with earlier findings. Most PSOs handle AI through governance structures designed for traditional digital projects: episodic approval triggers, dedicated compliance units sitting outside operational teams, and what interviewees described as "adversarial" relationships between project teams and compliance teams. What is notable: several interviewees reported "self-censorship" — teams reducing project scope before involving compliance — to avoid lengthy approval cycles.</p>
+
+          <p>The authors are honest about scope. Their validation sample is small (six interviews) and German-specific. But their hypothesis is corroborated consistently: existing PSO governance structures are only partially compatible with what agentic AI requires.</p>
+
+          <h2 class="blog-section-title">2. Estonia Mapped onto the Five Challenges</h2>
+
+          <p>Estonia is building an action plan, not a generic Agentic AI policy. It has twelve interlocking layers of state operation, of which nine are detailed in the Ilves and Velsberg follow-up. Below I map the layers onto the paper's five challenge groups, noting partial fits and observed differences.</p>
+
+          <p><strong>Cross-departmental implementation.</strong> This is the most dense one. Four layers contribute directly. Bürokratt, Estonia's public-sector virtual assistant, is now live across 18 government agencies and is designed as a framework for multi-agent collaboration. A function repository was launched in March 2026 to address a chronic problem: agencies building the same solutions and workflows separately. Estonia is also updating its law-making guidelines to require that new regulatory initiatives consider, at the drafting stage, whether AI could address the problem more effectively. Procurement plans across agencies are being consolidated into one searchable, machine-readable system covering 9,000 procurements per year and €6 billion in annual volume.</p>
+
+          <p><strong>Comprehensive evaluation.</strong> This is where the alignment between Estonia's published infrastructure and the paper's specification differs most. The Trustworthy AI toolbox (Layer 7), which entered early beta in March 2026, addresses the observation that public-sector AI typically fails not at the model layer but earlier, at problem framing, data quality, procurement, testing, and accountability. TARK provides centralised trust assessments for cloud-based and AI tools currently covering ChatGPT, Gemini, Claude, and Copilot. Neither of these is yet a full pre-deployment evaluation regime in the sense Schmitz et al. describe. The full evaluation architecture is still taking shape.</p>
+
+          <p><strong>Enhanced security.</strong> Andmejälgija (the Data Tracker) gives citizens visibility into government access to their data and becomes mandatory for all agencies by 2028. A four-stage PII pipeline (detection, tokenisation, anonymised cloud query, token rehydration) allows AI training on sensitive data without exposing it to external providers. Estonia is also moving toward local HPC capacity and shared European infrastructure for sensitive use cases.</p>
+
+          <p><strong>Operational visibility.</strong> This is where Estonia's design choices are most distinctive. The function repository includes an algorithmic registry providing an overview of AI systems used across the public sector, with an ambition toward mandatory disclosure requirements. RIA is piloting an Agent Registry to manage AI agents across government, with cryptographic machine identities (extending the national eID to machines), capability manifests defining what each agent can and cannot do, authorisation scopes, and kill switches. Andmejälgija is not just internal oversight — it is operationalised visibility as a citizen right. This goes beyond the paper's framing, where visibility is treated primarily as managerial and operational.</p>
+
+          <p><strong>Systematic auditing.</strong> Estonia has multiple live audit-style pilots: TTJA monitors advertisement compliance, the Gender Equality and Equal Treatment Commissioner scans job advertisements, and the Data Protection Inspectorate automates checks on personal data processing conditions. EquiTech, a dedicated initiative for detecting bias, discrimination, and opaque AI decision-making, builds practical methods and training materials for fairness audits. What is still under development, by the reviewed paper's standard, is independent third-party agent auditing entities and standards.</p>
+
+          <h2 class="blog-section-title">3. The Paper's Discussion in Conversation with Estonia</h2>
+
+          <p>Schmitz et al. close with three aggregated shortcomings of existing PSO governance structures, and three design principles for technical work on agent oversight.</p>
+
+          <img src="assets/blog6-discussion_scheme%20%5C.png" alt="The paper's discussion in conversation with the Agentic State follow-up" class="blog-body-image">
+
+          <p><strong>Shortcoming 1: Continuous oversight.</strong> The paper argues that segmented, event-triggered governance cannot scale to the frequency of events agentic systems generate. Their conclusion: governance responsibilities must be diffused towards operational departments whose work is augmented by agents. Estonia addresses exactly this point. Andmejälgija makes data access continuously visible by default. The Agent Registry attaches kill switches and capability manifests to individual agents, not to project approvals. The function repository and algorithmic registry distribute visibility horizontally rather than concentrating it in compliance units.</p>
+
+          <p><strong>Shortcoming 2: New governance capabilities throughout the lifecycle.</strong> The paper notes that visibility and evaluation require deeper integration of subject knowledge and technical understanding, necessitating upskilling and a redefined role for operational workers. Estonia's centralised licensing of approved AI tools through eesti.ai, paired with Digiriigiakadeemia and the planned 80% daily-use target, is a direct attempt to build operational governance capability rather than externalise it. Survey data shows 37% of public-sector workers and 45% of leaders already use AI daily, but only 2% believe full job substitution is possible.</p>
+
+          <p><strong>Shortcoming 3: Interdepartmental coordination.</strong> The function repository is the cleanest answer to this in any country I have looked at. By making cross-cutting workflows shareable as reusable components, it both reduces duplication and creates a structural mechanism for cross-departmental visibility into how agents are being deployed.</p>
+
+          <p><strong>Design principle 1: Tooling for distinct user groups.</strong> The paper recommends designing observability tooling for either technical external teams or subject matter experts, not interfaces that combine both. TARK is closer to this — it provides clear, centrally vetted risk profiles to non-technical adopters in agencies, while keeping technical assessment work elsewhere.</p>
+
+          <p><strong>Design principle 2: Non-technical interfaces with public servants.</strong> The Trustworthy AI toolbox addresses this most directly, by intervening at problem framing and data quality — the points where non-technical workers actually engage with AI systems — rather than at model evaluation alone.</p>
+
+          <p><strong>Design principle 3: Anticipating legacy systems.</strong> The Administrative Procedure Act (HMS) reform, approved by the Estonian government on 3 April 2026, is the standout move here. Instead of requiring legislative changes for each new automated process, it establishes a horizontal legal basis for automated administrative decisions. Safeguards include automatic notification of decisions, the right to contact a human official, transparency about decision logic, and human review on request.</p>
+
+          <h2 class="blog-section-title">And the Inbound Agents Problem</h2>
+
+          <img src="assets/blog6-agents2%20copy.png" alt="AI agents in a public service waiting room" class="blog-body-image">
+
+          <p>The Estonia follow-up flags what may become the most consequential governance challenge of all. AI agents are increasingly initiating interactions with the state on behalf of citizens — tax filings, funding applications, queries. The paper does not address this directly, focusing instead on agents deployed by the state, which is a deliberate scoping choice. The Agentic State follow-up takes it head on through the "Agent Residency" proposal: to give every AI agent a kind of digital ID and allow rights and responsibilities to be delegated from individuals or companies to their agents.</p>
+
+          <p>This is not yet policy, but it reframes the problem productively. Denying or prohibiting citizen-side agent access is unlikely to work if the procedure is standardised and the data is already in state systems. Better to design the interaction.</p>
+
+          <h2 class="blog-section-title">Closing Thoughts</h2>
+
+          <p>Two things stand out from putting these texts in conversation.</p>
+
+          <p>First, the paper's diagnosis is accurate, and its scope is deliberately bounded. The five challenge areas are necessary, but not sufficient for the full governance terrain. People and culture, citizen-facing visibility, and inbound agent interactions are all areas where agentic AI is changing the landscape, and where the Agentic State framework is more complete than the paper's research lens, by design.</p>
+
+          <p>Second, Estonia is not a generalisable model. Estonia is a small, digitally mature, high-trust state with a digital government legacy going back over two decades and a specific focus on AI-driven governance since 2018. Most PSOs do not have those conditions. But Estonia is useful as a living test of which parts of the governance architecture are actually possible to build in practice. Where Estonia has built something concrete (Bürokratt, Andmejälgija, the function repository, TARK), other states can study the design choices. Where Estonia is still working on it (formal third-party agent auditing, full pre-deployment evaluation regimes), this is a signal that even leading states are not solving these problems alone.</p>
+
+          <p>For PSOs starting later, the value of these documents read together is that they provide a shared vocabulary for what to build and for what is genuinely hard.</p>
+
+          <h2 class="blog-section-title">References</h2>
+
+          <p>[1] Schmitz, C., Rystrøm, J. and Batzner, J. (2025). Oversight Structures for Agentic AI in Public-Sector Organizations. <em>Proceedings of the 1st Workshop for Research on Agent Language Models (REALM 2025)</em>, pp. 298–308. ACL. <a href="https://aclanthology.org/2025.realm-1.21/" target="_blank" rel="noopener noreferrer">aclanthology.org</a></p>
+
+          <p>[2] Ilves, L. and Velsberg, O. (2026). Building the Agentic State in Estonia: What is already taking shape. Substack, 24 April 2026. <a href="https://luukasilves.substack.com/p/building-the-agentic-state-in-estonia" target="_blank" rel="noopener noreferrer">luukasilves.substack.com</a></p>
+
+          <p>[3] Ilves, L., Kilian, M., Peixoto, T. and Velsberg, O. (2025). The Agentic State. Vision Paper, Tallinn Digital Summit 2025. <a href="https://agenticstate.org/paper.html" target="_blank" rel="noopener noreferrer">agenticstate.org</a></p>
+
+          <hr class="blog-divider">
+
+          <p style="text-align: center;">
+            <a href="https://www.linkedin.com/pulse/five-governance-challenges-public-sector-agentic-ai-paper-slavina-r5gbf/" target="_blank" rel="noopener noreferrer" class="card-link" style="display: inline-block; padding: 0.75rem 1.5rem; font-size: 1rem;">Read full article on LinkedIn →</a>
+          </p>
+
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Lightbox (photography mode) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">&#x2715;</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous photo">&#x2039;</button>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next photo">&#x203A;</button>
+      <figure style="margin: 0;">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="photography/photos.js"></script>
+  <script src="photography/photography.js"></script>
 </body>
 </html>

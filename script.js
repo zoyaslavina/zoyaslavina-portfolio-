@@ -435,6 +435,41 @@
   }
 
   // ===== Blog Drag-to-Scroll =====
+  function initBooksDrag() {
+    var wrapper = document.querySelector('.books-scroll-wrapper');
+    var grid = wrapper && wrapper.querySelector('.books-grid');
+    if (!wrapper || !grid) return;
+
+    var isDown = false;
+    var startX, scrollLeft;
+
+    wrapper.addEventListener('mousedown', function(e) {
+      isDown = true;
+      wrapper.classList.add('dragging');
+      startX = e.pageX - grid.offsetLeft;
+      scrollLeft = grid.scrollLeft;
+      e.preventDefault();
+    });
+    wrapper.addEventListener('mouseleave', function() { isDown = false; wrapper.classList.remove('dragging'); });
+    wrapper.addEventListener('mouseup',    function() { isDown = false; wrapper.classList.remove('dragging'); });
+    wrapper.addEventListener('mousemove', function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      grid.scrollLeft = scrollLeft - (e.pageX - grid.offsetLeft - startX) * 2;
+    });
+
+    var touchStartX = null, touchScrollLeft = null;
+    wrapper.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].pageX - grid.offsetLeft;
+      touchScrollLeft = grid.scrollLeft;
+    }, { passive: true });
+    wrapper.addEventListener('touchmove', function(e) {
+      if (!touchStartX) return;
+      grid.scrollLeft = touchScrollLeft - (e.touches[0].pageX - grid.offsetLeft - touchStartX) * 1.5;
+    }, { passive: true });
+    wrapper.addEventListener('touchend', function() { touchStartX = null; });
+  }
+
   function initBlogDrag() {
     var wrapper = document.getElementById('blog-scroll-wrapper');
     var grid = wrapper && wrapper.querySelector('.blog-grid');
@@ -589,6 +624,43 @@
     });
   }
 
+  // ===== Mode Switch (SPA toggle) =====
+  function initModeSwitch() {
+    var btns = document.querySelectorAll('.mode-toggle button[data-mode]');
+    if (!btns.length) return;
+
+    function setMode(mode) {
+      document.body.classList.remove('mode-work', 'mode-photography');
+      document.body.classList.add('mode-' + mode);
+      btns.forEach(function(b) {
+        var active = b.dataset.mode === mode;
+        b.classList.toggle('mode-option--active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (mode === 'photography' && window.buildPhotographyGallery) {
+        window.buildPhotographyGallery();
+      }
+    }
+
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        setMode(this.dataset.mode);
+      });
+    });
+
+    // Clicking the track itself toggles to the other mode
+    var track = document.querySelector('.toggle-track');
+    if (track) {
+      track.addEventListener('click', function() {
+        var isWork = document.body.classList.contains('mode-work');
+        setMode(isWork ? 'photography' : 'work');
+      });
+    }
+
+    setMode('work'); // default
+  }
+
   // ===== Initialize All Features =====
   function init() {
     initDynamicTimeline();
@@ -596,10 +668,12 @@
     initSmoothScroll();
     initKeyboardNav();
     initTimelineDrag();
+    initBooksDrag();
     initBlogDrag();
     initTimelineBarClicks();
     initCVModal();
     initBlogModals();
+    initModeSwitch();
 
     // Only initialize animations if user doesn't prefer reduced motion
     if (!prefersReducedMotion()) {

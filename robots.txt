@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /CLAUDE.md
+Disallow: /AGENTS.md
+Disallow: /.claude/
+Allow: /
