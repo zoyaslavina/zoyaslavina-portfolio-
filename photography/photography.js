@@ -478,10 +478,26 @@
     });
   };
 
+  function initScrollHint() {
+    var hint = document.getElementById('photo-scroll-hint');
+    var galleryEl = document.getElementById('gallery');
+    if (!hint || !galleryEl || !('IntersectionObserver' in window)) return;
+    var hintObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          hint.classList.add('hidden');
+          hintObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    hintObserver.observe(galleryEl);
+  }
+
   function init() {
     initLightboxButtons();
     initKeyboardNav();
     initSwipe();
+    initScrollHint();
   }
 
   if (document.readyState === 'loading') {

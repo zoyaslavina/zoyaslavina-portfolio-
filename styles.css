@@ -16,6 +16,7 @@
   --transition-medium: 0.3s ease;
   --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.3);
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --nav-height: 3.5rem;
 }
 
 /* ===== Reset & Base ===== */
@@ -253,7 +254,7 @@ body.mode-photography .toggle-ball {
 .mode-switcher-bar {
   display: flex;
   justify-content: center;
-  padding: 5rem 0 1rem;  /* top clears the fixed nav */
+  padding: calc(var(--nav-height) + 1.5rem) 0 1rem;
 }
 
 /* ===== Mode panels ===== */
@@ -1154,6 +1155,11 @@ body.mode-photography .nav-link {
 
 .badge-thesis {
   background: #5a8f7b;
+}
+
+.badge--shelved {
+  background: #3a3a3a;
+  color: var(--text-secondary);
 }
 
 .card-title {
