@@ -286,6 +286,26 @@ body.mode-photography .nav-link {
   pointer-events: none;
 }
 
+.photo-nav-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  white-space: nowrap;
+}
+
+body.mode-photography .photo-nav-info {
+  opacity: 1;
+}
+
 /* ===== Hero Section ===== */
 .hero {
   min-height: 100vh;
