@@ -166,6 +166,13 @@
     var counter = document.getElementById('likes-counter');
     if (counter) counter.textContent = used + ' / ' + MAX_DAILY_LIKES + ' likes used today';
 
+    var navLikes = document.getElementById('photo-nav-likes');
+    if (navLikes) {
+      navLikes.textContent = remaining <= 0
+        ? 'no likes left today'
+        : remaining + (remaining === 1 ? ' like' : ' likes') + ' left today';
+    }
+
     for (var i = 0; i < MAX_DAILY_LIKES; i++) {
       var pip = document.getElementById('like-pip-' + i);
       if (pip) pip.classList.toggle('used', i < used);

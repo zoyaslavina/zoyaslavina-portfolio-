@@ -641,6 +641,19 @@
       if (mode === 'photography' && window.buildPhotographyGallery) {
         window.buildPhotographyGallery();
       }
+      if (mode === 'photography') {
+        var navLikes = document.getElementById('photo-nav-likes');
+        if (navLikes) {
+          try {
+            var dayKey = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+            var liked = JSON.parse(localStorage.getItem('gallery_liked_' + dayKey) || '[]');
+            var rem = Math.max(0, 3 - liked.length);
+            navLikes.textContent = rem === 0
+              ? 'no likes left today'
+              : rem + (rem === 1 ? ' like' : ' likes') + ' left today';
+          } catch (e) {}
+        }
+      }
     }
 
     btns.forEach(function(btn) {
