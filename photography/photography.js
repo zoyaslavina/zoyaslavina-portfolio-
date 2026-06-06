@@ -48,15 +48,8 @@
 
   function selectPhotosForPeriod(allPhotos, count) {
     var period = getCurrentPeriod();
-
-    var yesterday = seededShuffle(allPhotos, period - 1).slice(0, Math.min(count, allPhotos.length));
-    var yesterdayThumbs = {};
-    yesterday.forEach(function(p) { yesterdayThumbs[p.thumb] = true; });
-
-    var pool = allPhotos.filter(function(p) { return !yesterdayThumbs[p.thumb]; });
-    if (pool.length < count) pool = allPhotos;
-
-    return seededShuffle(pool, period).slice(0, Math.min(count, pool.length));
+    var shuffled = seededShuffle(allPhotos, period);
+    return shuffled.slice(0, Math.min(count, shuffled.length));
   }
 
   // ============================================================
