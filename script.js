@@ -662,7 +662,30 @@
   }
 
   // ===== Initialize All Features =====
+  // ===== Dynamic Nav Height =====
+  function updateNavHeight() {
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'px');
+  }
+
   function init() {
+    updateNavHeight();
+
+    if (window.ResizeObserver) {
+      new ResizeObserver(updateNavHeight).observe(document.querySelector('.nav'));
+    } else {
+      var _navResizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(_navResizeTimer);
+        _navResizeTimer = setTimeout(updateNavHeight, 100);
+      });
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(updateNavHeight);
+    }
+
     initDynamicTimeline();
     initBioToggle();
     initSmoothScroll();
