@@ -19,6 +19,7 @@
 .photo-intro-text {
   color: var(--text-secondary);
   line-height: 1.7;
+  text-align: justify;
 }
 
 .photo-gallery-note {

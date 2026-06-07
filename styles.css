@@ -491,8 +491,8 @@ body.mode-photography .photo-nav-info {
 
 /* Bio */
 .bio-container {
-  text-align: left;
-  max-width: 600px;
+  text-align: justify;
+  max-width: 780px;
   margin: 0 auto;
 }
 
