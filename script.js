@@ -367,7 +367,7 @@
   function initKeyboardNav() {
     // Allow Enter key to activate buttons and links
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && document.activeElement.matches('.bio-toggle, .card-link, .contact-link, .cv-button')) {
+      if (e.key === 'Enter' && document.activeElement.matches('.bio-toggle, .card-link, .contact-link')) {
         e.preventDefault();
         document.activeElement.click();
       }
@@ -531,51 +531,6 @@
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
-  // ===== CV Modal =====
-  function initCVModal() {
-    const cvToggle = document.getElementById('cv-toggle');
-    const cvModal = document.getElementById('cv-modal');
-
-    if (!cvToggle || !cvModal) return;
-
-    const cvClose = cvModal.querySelector('.cv-modal-close');
-    const cvOverlay = cvModal.querySelector('.cv-modal-overlay');
-
-    function openCVModal() {
-      cvModal.classList.add('active');
-      cvModal.setAttribute('aria-hidden', 'false');
-      cvToggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-      // Focus the close button for accessibility
-      if (cvClose) cvClose.focus();
-    }
-
-    function closeCVModal() {
-      cvModal.classList.remove('active');
-      cvModal.setAttribute('aria-hidden', 'true');
-      cvToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      // Return focus to toggle button
-      cvToggle.focus();
-    }
-
-    cvToggle.addEventListener('click', openCVModal);
-
-    if (cvClose) {
-      cvClose.addEventListener('click', closeCVModal);
-    }
-
-    if (cvOverlay) {
-      cvOverlay.addEventListener('click', closeCVModal);
-    }
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && cvModal.classList.contains('active')) {
-        closeCVModal();
-      }
-    });
-  }
-
   // ===== Blog Instant View Modal =====
   function initBlogModals() {
     const blogButtons = document.querySelectorAll('.blog-instant-view');
@@ -707,7 +662,6 @@
     initBooksDrag();
     initBlogDrag();
     initTimelineBarClicks();
-    initCVModal();
     initBlogModals();
     initModeSwitch();
 
