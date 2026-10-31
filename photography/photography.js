@@ -60,21 +60,13 @@
   // Pre-arrange photos to fit slot orientations
   // ============================================================
 
-  function preloadOrientations(photos, callback) {
-    var orientations = new Array(photos.length);
-    var remaining = photos.length;
-    if (!remaining) { callback(orientations); return; }
-
-    photos.forEach(function (photo, i) {
-      var img = new Image();
-      function done() {
-        orientations[i] = img.naturalHeight > img.naturalWidth ? 'P' : 'L';
-        photo.isPortrait = orientations[i] === 'P';
-        if (--remaining === 0) callback(orientations);
-      }
-      img.onload = done;
-      img.onerror = done;
-      img.src = photo.thumb || photo.src || photo.full;
+  // Uses the sizes in photos.js, so the grid never waits for images to download
+  function readOrientations(photos) {
+    return photos.map(function (photo) {
+      photo.isPortrait = photo.w && photo.h
+        ? photo.h > photo.w
+        : photo.orientation === 'portrait';
+      return photo.isPortrait ? 'P' : 'L';
     });
   }
 
@@ -271,10 +263,17 @@
 
       var img = document.createElement('img');
       img.className = 'photo-thumb';
-      img.src = photo.thumb || photo.src || photo.full;
       img.setAttribute('alt', photo.alt || '');
       img.setAttribute('decoding', 'async');
+      img.setAttribute('loading', 'lazy');
+      // Reserves the photo's space so the grid doesn't jump as photos arrive
+      if (photo.w && photo.h) {
+        img.setAttribute('width', photo.w);
+        img.setAttribute('height', photo.h);
+      }
       img.onload = function () { img.classList.add('loaded'); };
+      img.onerror = function () { item.style.display = 'none'; };
+      img.src = photo.thumb || photo.src || photo.full;
 
       wrap.appendChild(img);
       item.appendChild(wrap);
@@ -329,7 +328,7 @@
       });
     });
 
-    // Orientations pre-set by preloadOrientations — run optimisation now
+    // Orientations pre-set by readOrientations — run optimisation now
     optimizeTrios(photos, grid);
 
     // Wire up like system
@@ -477,12 +476,11 @@
   window.buildPhotographyGallery = function () {
     if (galleryBuilt) return;
     galleryBuilt = true;
-    activePhotos = selectPhotosForPeriod(window.PHOTOS || [], GALLERY_SIZE);
+    var selected = selectPhotosForPeriod(window.PHOTOS || [], GALLERY_SIZE);
 
-    preloadOrientations(activePhotos, function (orientations) {
-      var arranged = rearrangeForSlots(activePhotos, orientations);
-      buildGrid(arranged);
-    });
+    // The lightbox indexes into activePhotos, so it must match the grid order
+    activePhotos = rearrangeForSlots(selected, readOrientations(selected));
+    buildGrid(activePhotos);
   };
 
   function initScrollHint() {

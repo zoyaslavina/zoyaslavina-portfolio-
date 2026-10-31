@@ -117,7 +117,7 @@
   height: auto;
   display: block;
   opacity: 0;
-  transition: opacity var(--transition-medium);
+  transition: opacity 0.7s ease;
 }
 
 .photo-thumb.loaded {

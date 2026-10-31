@@ -126,7 +126,8 @@
         }
       });
     }, {
-      threshold: 0.1,
+      // 0, not a fraction: the gallery is many screens tall, so 10% of it never fits in view
+      threshold: 0,
       rootMargin: '0px 0px -50px 0px'
     });
 
