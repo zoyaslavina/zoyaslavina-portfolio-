@@ -29,7 +29,7 @@ Or open `index.html` directly in a browser.
 ## Design Tokens (CSS Custom Properties)
 
 ```css
---primary-orange: #FF6B35    --Codex-orange: #CC785C
+--accent: #7CC4F5            --accent-soft: #5BA3D0
 --bg-dark: #1a1a1a           --bg-card: #252525
 --text-primary: #e0e0e0      --text-secondary: #a0a0a0
 ```
